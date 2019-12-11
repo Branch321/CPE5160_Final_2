@@ -1,0 +1,61 @@
+C51 COMPILER V6.02  READ_SECTOR                                                            12/10/2019 19:16:59 PAGE 1   
+
+
+C51 COMPILER V6.02, COMPILATION OF MODULE READ_SECTOR
+OBJECT MODULE PLACED IN .\Read_Sector.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE .\Read_Sector.c DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /* Names: Tyler Andrews, Brennan Campbell, and Tyler Tetens
+   2           * Title: Experiment #4 - Fat File System
+   3           */
+   4          #include "Read_Sector.h"
+   5          #include "SPI.h"
+   6          #include "SDCard.h"
+   7          #include <stdio.h>
+   8          
+   9          // Same error values as Directory_Functions_struct.h
+  10          #define No_Disk_Error 0x00
+  11          #define Disk_Error 0xF0
+  12          
+  13          uint8_t Read_Sector(uint32_t sector_number,uint16_t sector_size, uint8_t * array_for_data)
+  14          {
+  15   1      	uint8_t SDtype;
+  16   1      	uint8_t error_flag = No_Disk_Error;
+  17   1      
+  18   1      	// Grab SD card type, high capacity or standard capacity
+  19   1      	SDtype=Return_SD_Card_Type();
+  20   1      	// Start communication with SD card by clearing channel
+  21   1      	SPI_Select_Clear(SD_Card_Select);
+  22   1      	// Send command 17 for read block, sector_number adjusted for HC or SC
+  23   1      	error_flag=SEND_COMMAND(17,(sector_number<<SDtype));
+  24   1      	// Error check and read the block
+  25   1      	if(error_flag==no_errors) 
+  26   1      	{
+  27   2      		error_flag=read_block(sector_size, array_for_data);
+  28   2      	}
+  29   1      	// Set SPI select back high to end transmission
+  30   1      	SPI_Select_Set(SD_Card_Select);
+  31   1      	// Final error check
+  32   1      	if(error_flag!=no_errors)
+  33   1      	{
+  34   2      		error_flag=Disk_Error;
+  35   2      	}
+  36   1      	return error_flag;
+  37   1      }
+  38          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     85    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

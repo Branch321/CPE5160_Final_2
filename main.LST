@@ -1,0 +1,168 @@
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:17:02 PAGE 1   
+
+
+C51 COMPILER V6.02, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE .\main.c DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /* Names: Tyler Andrews, Brennan Campbell, and Tyler Tetens
+   2           * Title: Experiment #4 - Fat File System
+   3           */
+   4          
+   5          #include "AT89C51RC2.h"
+   6          #include "stdio.h"
+   7          #include "main.h"
+   8          #include "PORT.H"
+   9          #include "UART.h"
+  10          #include "print_bytes.h"
+  11          #include "SPI.h"
+  12          #include "SDcard.h"
+  13          #include "Long_Serial_In.h"
+  14          #include "LCD_routines.h"
+  15          #include "Timer0_hardware_delay_1ms.h"
+  16          #include "Outputs.h"
+  17          #include "LED_Control.h"
+  18          #include "Directory_Functions_struct.h"
+  19          #include "Read_Sector.h"
+  20          #include <stdio.h>
+  21          #include "sEOS.h"
+  22          #include "STA013.h"
+*** WARNING 317 IN LINE 11 OF I2C.h: redefinition of macro 'no_errors'
+*** WARNING 317 IN LINE 13 OF STA013.h: redefinition of macro 'no_errors'
+  23          #include "MP3.h"
+  24          
+  25          uint8_t code SD_start[]="SD Card Init...";
+  26          uint8_t code SDSC[]="Std. Capacity";
+  27          uint8_t code SDHC[]="High Capacity";
+  28          
+  29          
+  30          xdata uint8_t buffer1[512];
+  31          xdata uint8_t buffer2[512];
+  32          
+  33          main()
+  34          {
+  35   1         uint32_t idata block_num;
+  36   1         uint16_t idata i;
+  37   1         uint8_t idata error_flag;
+  38   1         uint8_t idata SD_stat;
+  39   1         uint32_t idata cluster_num;
+  40   1         uint32_t idata current_directory_sector;
+  41   1         uint32_t idata num_entries;
+  42   1         FS_values_t * Mounted_Drive_values = Export_Drive_values();
+  43   1         AUXR=0x0c;   // make all of XRAM available, ALE always on
+  44   1         if(OSC_PER_INST==6)  // sets the x2 bit according to the OSC_PER_INST value
+  45   1         {
+  46   2             CKCON0=0x01;  // set X2 clock mode
+  47   2         }
+  48   1         else if(OSC_PER_INST==12)
+  49   1         {
+  50   2             CKCON0=0x00;  // set standard clock mode
+  51   2         }
+  52   1         
+  53   1         P2_set_bit(0x0F);  // sets lower four bits of port 2 for switch inputs.
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:17:02 PAGE 2   
+
+  54   1         LEDS_OFF(Amber_LED|Yellow_LED|Green_LED);
+  55   1         LEDS_ON(Red_LED);
+  56   1         i=0;
+  57   1         while(i<=60000) i++;
+  58   1         LEDS_OFF(Red_LED);
+  59   1         uart_init(9600);
+  60   1         printf("Done initalizing uart!\r\n");
+  61   1         LCD_Init();
+  62   1         printf("Done initalizing LCD!\r\n");
+  63   1         LCD_Print(line1,0,SD_start);   
+  64   1         error_flag=SPI_Master_Init(400000UL);
+  65   1         printf("Starting SPI\r\n");
+  66   1         STA013_init();
+  67   1         printf("Done initalizing STA013!\r\n");
+  68   1         if(error_flag!=no_errors)
+  69   1         {
+  70   2            LEDS_ON(Red_LED);  // An error causes the program to stop
+  71   2      	  UART_Transmit('S');
+  72   2            while(1);
+  73   2         }
+  74   1         LEDS_ON(Amber_LED);
+  75   1         // SD Card Initialization
+  76   1         error_flag=SD_card_init();
+  77   1         if(error_flag!=no_errors)
+  78   1         {
+  79   2            LEDS_ON(Red_LED);  // An error causes the program to stop
+  80   2      	  UART_Transmit('C');
+  81   2            while(1);
+  82   2         }
+  83   1         LEDS_OFF(Amber_LED);
+  84   1         error_flag=SPI_Master_Init(25000000UL);
+  85   1         if(error_flag!=no_errors)
+  86   1         {
+  87   2            LEDS_ON(Red_LED);  // An error causes the program to stop
+  88   2      	  UART_Transmit('P');
+  89   2            while(1);
+  90   2         }
+  91   1         for(i=0;i<512;i++)
+  92   1         {
+  93   2            buffer1[i]=0xff;  // erase valout for debug
+  94   2      //      buf2[i]=0xff;
+  95   2         }
+  96   1         SD_stat=Return_SD_Card_Type();
+  97   1         if(SD_stat==Standard_Capacity)
+  98   1         {
+  99   2            LCD_Print(line2,0,SDSC);
+ 100   2         }
+ 101   1         else if(SD_stat==High_Capacity)
+ 102   1         {
+ 103   2            LCD_Print(line2,0,SDHC);
+ 104   2         }
+ 105   1      // Main Loop
+ 106   1         error_flag = Mount_Drive(buffer1);
+ 107   1         current_directory_sector = Mounted_Drive_values->FirstRootDirSec;
+ 108   1         while(1)
+ 109   1         {
+ 110   2            num_entries = Print_Directory(current_directory_sector, buffer1);
+ 111   2            printf("Input Entry #: ");
+ 112   2            block_num=long_serial_input(); //block_num is entry number for Read_Dir_Entry()
+ 113   2            while ((block_num <= 0) || (block_num > num_entries))
+ 114   2            {
+ 115   3               printf("Invalid selection. Please select a valid entry.");
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:17:02 PAGE 3   
+
+ 116   3               block_num = long_serial_input();
+ 117   3            }
+ 118   2      
+ 119   2      	  LEDS_ON(Green_LED);
+ 120   2      	  cluster_num = Read_Dir_Entry(current_directory_sector, block_num, buffer1);
+ 121   2      	  if((cluster_num &directory_bit)!=0) // directory mask
+ 122   2      	  {
+ 123   3      	  	  printf("Entry is a directory...Opening now...\r\n");
+ 124   3      	      cluster_num &= 0x0FFFFFFF;
+ 125   3                current_directory_sector = First_Sector(cluster_num);
+ 126   3      	  }
+ 127   2      	  else // if entry is a file
+ 128   2      	  {
+ 129   3      	  	   printf("Entry is a file...Opening now...\r\n");
+ 130   3      	  	   cluster_num &= 0x0FFFFFFF;
+ 131   3      	      //Open_File(cluster_num, buf2); //this needs to be gotten rid of
+ 132   3      		  Play_MP3_file(cluster_num);
+ 133   3      		  
+ 134   3      	  }
+ 135   2         }
+ 136   1      } 
+ 137          
+ 138          
+ 139          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    563    ----
+   CONSTANT SIZE    =    274    ----
+   XDATA SIZE       =   1024    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----      20
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,467 @@
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 1   
+
+
+C51 COMPILER V6.02, COMPILATION OF MODULE DIRECTORY_FUNCTIONS_STRUCT
+OBJECT MODULE PLACED IN .\Directory_Functions_struct.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE .\Directory_Functions_struct.c DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /* Names: Tyler Andrews, Brennan Campbell, and Tyler Tetens
+   2           * Title: Experiment #4 - Fat File System
+   3           */
+   4          #include "AT89C51RC2.h"
+   5          #include <stdio.h>
+   6          #include "main.h"
+   7          #include "PORT.H"
+   8          #include "UART.h"
+   9          #include "SPI.h"
+  10          #include "SDCard.h"
+  11          #include "print_bytes.h"
+  12          #include "Directory_Functions_struct.h"
+  13          #include "Read_Sector.h"
+  14          #include <string.h>
+  15          #include "print_bytes.h"
+  16          #include "Long_Serial_In.h"
+  17          
+  18          FS_values_t idata Drive_values;
+  19          
+  20          /***********************************************************************
+  21          DESC: Returns a pointer to the global structure Drive_values to export to other files
+  22          INPUT: void
+  23          RETURNS: Pointer to the structure Drive_values
+  24          CAUTION: 
+  25          ************************************************************************/
+  26          
+  27          FS_values_t * Export_Drive_values(void)
+  28          {
+  29   1         return &Drive_values;
+  30   1      }
+  31          
+  32          uint8_t read8(uint16_t offset, uint8_t * array_name)
+  33          {
+  34   1      	uint8_t return_value;
+  35   1      	return_value = array_name[offset];
+  36   1      	return return_value;
+  37   1      
+  38   1      }
+  39          
+  40          uint16_t read16(uint16_t offset, uint8_t * array_name)
+  41          {
+  42   1      	uint32_t return_value;
+  43   1      	uint8_t temp, index;
+  44   1      	return_value=0;
+  45   1      
+  46   1      	// little endian to big endian
+  47   1      	// loop for 2 bytes
+  48   1      	for(index=0;index<2;index++)
+  49   1      	{
+  50   2      		temp=*(array_name+offset+(1-index));
+  51   2      		return_value=return_value<<8;
+  52   2      		return_value|=temp;
+  53   2      	}
+  54   1      	return return_value;
+  55   1      }
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 2   
+
+  56          
+  57          uint32_t read32(uint16_t offset, uint8_t * array_name)
+  58          {
+  59   1      	uint32_t return_value;
+  60   1      	uint8_t temp, index;
+  61   1      	return_value=0;
+  62   1      
+  63   1      	// little endian to big endian
+  64   1      	// loop for 4 bytes
+  65   1      	for(index=0;index<4;index++)
+  66   1      	{
+  67   2      		temp=*(array_name+offset+(3-index));
+  68   2      		return_value=return_value<<8;
+  69   2      		return_value|=temp;
+  70   2      	}
+  71   1      	return return_value;
+  72   1      }
+  73          
+  74          /***********************************************************************
+  75          DESC: Prints all short file name entries for a given directory
+  76          INPUT: Starting Sector of the directory and the pointer to a
+  77          block of memory in xdata that can be used to read blocks from the SD card
+  78          RETURNS: uint16_t number of entries found in the directory
+  79          CAUTION: Supports FAT16, SD_shift must be set before using this function
+  80          ************************************************************************/
+  81          
+  82          uint16_t  Print_Directory(uint32_t Sector_num, uint8_t xdata * array_in)
+  83          { 
+  84   1         uint32_t Sector, max_sectors;
+  85   1         uint16_t i, entries;
+  86   1         uint8_t temp8, j, attr, out_val, error_flag;
+  87   1         uint8_t * values;
+  88   1      
+  89   1      
+  90   1         values=array_in;
+  91   1         entries=0;
+  92   1         i=0;
+  93   1         if (Drive_values.FATtype==FAT16)  // included for FAT16 compatibility
+  94   1         { 
+  95   2            max_sectors=Drive_values.RootDirSecs;   // maximum sectors in a FAT16 root directory
+  96   2         }
+  97   1         else
+  98   1         {
+  99   2            max_sectors=Drive_values.SecPerClus;
+ 100   2         }
+ 101   1         Sector=Sector_num;
+ 102   1         error_flag=Read_Sector(Sector, Drive_values.BytesPerSec, values);
+ 103   1         if(error_flag==no_errors)
+ 104   1         {
+ 105   2           do
+ 106   2           {
+ 107   3              temp8=read8(0+i,values);  // read first byte to see if empty
+ 108   3              if((temp8!=0xE5)&&(temp8!=0x00))
+ 109   3      	    {  
+ 110   4      	       attr=read8(0x0b+i,values);
+ 111   4      		   if((attr&0x0E)==0)   // if hidden, system or Vol_ID bit is set do not print
+ 112   4      		   {
+ 113   5      		      entries++;
+ 114   5      			  printf("%5d. ",entries);  // print entry number with a fixed width specifier
+ 115   5      		      for(j=0;j<8;j++)
+ 116   5      			  {
+ 117   6      			     out_val=read8(i+j,values);   // print the 8 byte name
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 3   
+
+ 118   6      			     putchar(out_val);
+ 119   6      			  }
+ 120   5                    if((attr&0x10)==0x10)  // indicates directory
+ 121   5      			  {
+ 122   6      			     for(j=8;j<11;j++)
+ 123   6      			     {
+ 124   7      			        out_val=read8(i+j,values);
+ 125   7      			        putchar(out_val);
+ 126   7      			     }
+ 127   6      			     printf("[DIR]\n");
+ 128   6      			  }
+ 129   5      			  else       // print a period and the three byte extension for a file
+ 130   5      			  {
+ 131   6      			     putchar(0x2E);       
+ 132   6      			     for(j=8;j<11;j++)
+ 133   6      			     {
+ 134   7      			        out_val=read8(i+j,values);
+ 135   7      			        putchar(out_val);
+ 136   7      			     }
+ 137   6      			     putchar(0x0d);
+ 138   6                       putchar(0x0a);
+ 139   6      			  }
+ 140   5      		    }
+ 141   4      		}
+ 142   3      		    i=i+32;  // next entry
+ 143   3      		    if(i>510)
+ 144   3      		    {
+ 145   4      			  Sector++;
+ 146   4                    if((Sector-Sector_num)<max_sectors)
+ 147   4      			  {
+ 148   5                       error_flag=Read_Sector(Sector,Drive_values.BytesPerSec,values);
+ 149   5      			     if(error_flag!=no_errors)
+ 150   5      			     {
+ 151   6      			        entries=0;   // no entries found indicates disk read error
+ 152   6      				    temp8=0;     // forces a function exit
+ 153   6      			     }
+ 154   5                       i=0;
+ 155   5      			  }
+ 156   4      			  else
+ 157   4      			  {
+ 158   5      			     entries=entries|more_entries;  // set msb to indicate more entries in another cluster
+ 159   5      			     temp8=0;                       // forces a function exit
+ 160   5      			  }
+ 161   4      		    }
+ 162   3               
+ 163   3      	  }while(temp8!=0);
+ 164   2      	}
+ 165   1      	else
+ 166   1      	{
+ 167   2      		printf("Error has occured");
+ 168   2      	   entries=0;    // no entries found indicates disk read error
+ 169   2      	}
+ 170   1         return entries;
+ 171   1       }
+ 172          
+ 173          
+ 174          /***********************************************************************
+ 175          DESC: Uses the same method as Print_Directory to locate short file names,
+ 176                but locates a specified entry and returns and cluster  
+ 177          INPUT: Starting Sector of the directory, an entry number and a pointer to a 
+ 178          block of memory in xdata that can be used to read blocks from the SD card
+ 179          RETURNS: uint32_t with cluster in lower 28 bits.  Bit 28 set if this is 
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 4   
+
+ 180                   a directory entry, clear for a file.  Bit 31 set for error.
+ 181          CAUTION: 
+ 182          ************************************************************************/
+ 183          
+ 184          uint32_t Read_Dir_Entry(uint32_t Sector_num, uint16_t Entry, uint8_t xdata * array_in)
+ 185          { 
+ 186   1         uint32_t Sector, max_sectors, return_clus;
+ 187   1         uint16_t i, entries;
+ 188   1         uint8_t temp8, attr, error_flag;
+ 189   1         uint8_t * values;
+ 190   1      
+ 191   1         values=array_in;
+ 192   1         entries=0;
+ 193   1         i=0;
+ 194   1         return_clus=0;
+ 195   1         if (Drive_values.FATtype==FAT16)  // included for FAT16 compatibility
+ 196   1         { 
+ 197   2            max_sectors=Drive_values.RootDirSecs;   // maximum sectors in a FAT16 root directory
+ 198   2         }
+ 199   1         else
+ 200   1         {
+ 201   2            max_sectors=Drive_values.SecPerClus;
+ 202   2         }
+ 203   1         Sector=Sector_num;
+ 204   1         error_flag=Read_Sector(Sector,Drive_values.BytesPerSec,values);
+ 205   1         if(error_flag==no_errors)
+ 206   1         {
+ 207   2           do
+ 208   2           {
+ 209   3              temp8=read8(0+i,values);  // read first byte to see if empty
+ 210   3              if((temp8!=0xE5)&&(temp8!=0x00))
+ 211   3      	    {  
+ 212   4      	       attr=read8(0x0b+i,values);
+ 213   4      		   if((attr&0x0E)==0)    // if hidden do not print
+ 214   4      		   {
+ 215   5      		      entries++;
+ 216   5                    if(entries==Entry)
+ 217   5                    {
+ 218   6      			    if(Drive_values.FATtype==FAT32)
+ 219   6                      {
+ 220   7                         return_clus=read8(21+i,values);
+ 221   7      				   return_clus=return_clus<<8;
+ 222   7                         return_clus|=read8(20+i,values);
+ 223   7                         return_clus=return_clus<<8;
+ 224   7                      }
+ 225   6                      return_clus|=read8(27+i,values);
+ 226   6      			    return_clus=return_clus<<8;
+ 227   6                      return_clus|=read8(26+i,values);
+ 228   6      			    attr=read8(0x0b+i,values);
+ 229   6      			    if(attr&0x10) return_clus|=directory_bit;
+ 230   6                      temp8=0;    // forces a function exit
+ 231   6                    }
+ 232   5                    
+ 233   5      		    }
+ 234   4      		}
+ 235   3      		    i=i+32;  // next entry
+ 236   3      		    if(i>510)
+ 237   3      		    {
+ 238   4      			  Sector++;
+ 239   4      			  if((Sector-Sector_num)<max_sectors)
+ 240   4      			  {
+ 241   5                       error_flag=Read_Sector(Sector,Drive_values.BytesPerSec,values);
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 5   
+
+ 242   5      			     if(error_flag!=no_errors)
+ 243   5      			     {
+ 244   6      			         return_clus=no_entry_found;
+ 245   6                           temp8=0; 
+ 246   6      			     }
+ 247   5      			     i=0;
+ 248   5      			  }
+ 249   4      			  else
+ 250   4      			  {
+ 251   5      			     temp8=0;                       // forces a function exit
+ 252   5      			  }
+ 253   4      		    }
+ 254   3               
+ 255   3      	  }while(temp8!=0);
+ 256   2      	}
+ 257   1      	else
+ 258   1      	{
+ 259   2      	   return_clus=no_entry_found;
+ 260   2      	}
+ 261   1      	if(return_clus==0) return_clus=no_entry_found;
+ 262   1         return return_clus;
+ 263   1       }
+ 264          
+ 265          uint8_t Mount_Drive(uint8_t xdata * array_name)
+ 266          {
+ 267   1      	//uint8_t i;
+ 268   1      	uint8_t temp_8;
+ 269   1      	uint8_t error_flag;
+ 270   1      	// Below are constants from BPB used for calculations
+ 271   1      	// for the values in struct FS_values_t
+ 272   1      	uint16_t RsvdSectorCount;
+ 273   1      	uint8_t NumFATS;
+ 274   1      	uint16_t RootEntryCnt;
+ 275   1      	uint16_t TotalSectors16;
+ 276   1      	uint16_t FATsz16;
+ 277   1      	uint32_t TotalSectors32;
+ 278   1      	uint32_t FATsz32;
+ 279   1      	uint32_t FATSz;
+ 280   1      	//Ran out of space so now some vars are in xdata
+ 281   1      	uint32_t xdata TotSec;
+ 282   1      	uint32_t xdata DataSec;
+ 283   1      	uint32_t RootCluster;
+ 284   1      	uint32_t RelativeSectors;
+ 285   1      	uint32_t CountofClus;
+ 286   1      	
+ 287   1      	// Read in BPB or MBR
+ 288   1      	error_flag = Read_Sector(0, 512, array_name);
+ 289   1      	// Check for BPB or MBR
+ 290   1      	temp_8 = read8(0,array_name);
+ 291   1      	printf("Debug:: Offset 0 of Sector 0 is %x\r\n",temp_8);
+ 292   1      	if((temp_8!=0xEB)&&(temp_8!=0xE9))
+ 293   1      	{
+ 294   2      		printf("Found MBR...\r\n");
+ 295   2      		RelativeSectors = read32(0x01C6,array_name);
+ 296   2      		printf("Debug:: Offset 0 of Relative Sectors is %lx\r\n",RelativeSectors);
+ 297   2      		error_flag = Read_Sector(RelativeSectors ,512,array_name);
+ 298   2      		temp_8 = read8(0,array_name);
+ 299   2      		printf("Debug:: temp8 is %x\r\n",temp_8);
+ 300   2      		if((temp_8!=0xEB)&&(temp_8!=0xE9))
+ 301   2      		{
+ 302   3      			printf("Error BPB not Found!\r\n");
+ 303   3      		}
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 6   
+
+ 304   2      		else
+ 305   2      		{
+ 306   3      			printf("BPB Found!\r\n");
+ 307   3      		}
+ 308   2      	}
+ 309   1      	//print_memory(array_name, 512);
+ 310   1      	Drive_values.BytesPerSec = read16(0x0B,array_name);
+ 311   1      	printf("BytesPerSec:: %x\r\n",Drive_values.BytesPerSec);
+ 312   1      	Drive_values.SecPerClus = read8(0x0D,array_name);
+ 313   1      	//printf("SecPerClus:: %bx\r\n",Drive_values.SecPerClus);
+ 314   1      	RsvdSectorCount = read16(0x0E,array_name);
+ 315   1      	//printf("RsvdSectorCount:: %x\r\n",RsvdSectorCount);
+ 316   1      	NumFATS = read8(0x10,array_name);
+ 317   1      	//printf("NumFATS:: %bx\r\n",NumFATS);
+ 318   1      	RootEntryCnt = read16(0x11,array_name);
+ 319   1      	//printf("RootEntryCnt:: %x\r\n",RootEntryCnt);
+ 320   1      	TotalSectors16 = read16(0x13,array_name);
+ 321   1      	//printf("TotalSectors16:: %x\r\n",TotalSectors16);
+ 322   1      	FATsz16 = read16(0x16,array_name);
+ 323   1      	//printf("FATsz16:: %x\r\n",FATsz16);
+ 324   1      	TotalSectors32 = read32(0x20,array_name);
+ 325   1      	//printf("TotalSectors32:: %lx\r\n",TotalSectors32);
+ 326   1      	FATsz32 = read32(0x24,array_name);
+ 327   1      	//printf("FATsz32:: %lx\r\n",FATsz32);
+ 328   1      	RootCluster = read32(0x2C, array_name);
+ 329   1      	//printf("RootCluster:: %lx\r\n",RootCluster);
+ 330   1      	Drive_values.StartofFAT = RsvdSectorCount + RelativeSectors;
+ 331   1      	//printf("StartofFAT:: %lx\r\n",Drive_values.StartofFAT);
+ 332   1      	Drive_values.RootDirSecs = ((RootEntryCnt*32) + (Drive_values.BytesPerSec-1))/Drive_values.BytesPerSec;
+ 333   1      	//printf("RootDirSecs:: %lx\r\n",Drive_values.RootDirSecs);
+ 334   1      	Drive_values.FirstDataSec = RsvdSectorCount + (NumFATS*FATsz32) + Drive_values.RootDirSecs + RelativeSect
+             -ors;
+ 335   1      	//printf("FirstDataSec:: %lx\r\n",Drive_values.FirstDataSec);
+ 336   1      	Drive_values.FirstRootDirSec = ((RootCluster-2)*Drive_values.SecPerClus)+Drive_values.FirstDataSec;
+ 337   1      	//printf("FirstRootDirSec:: %lx\r\n",Drive_values.FirstRootDirSec);
+ 338   1      	Drive_values.FATshift = FAT32_shift;
+ 339   1      
+ 340   1      	//Checks FAT Size to use
+ 341   1      	if(FATsz16 != 0)
+ 342   1      	{
+ 343   2      		FATSz = FATsz16;
+ 344   2      	}
+ 345   1      	else
+ 346   1      	{
+ 347   2      		FATSz = FATsz32;
+ 348   2      	}
+ 349   1      	
+ 350   1      	//Checks which TotalSectors to use
+ 351   1      	if(TotalSectors16 != 0)
+ 352   1      	{
+ 353   2      		TotSec = TotalSectors16;
+ 354   2      	}
+ 355   1      	else
+ 356   1      	{
+ 357   2      		TotSec = TotalSectors32;
+ 358   2      	}
+ 359   1      	
+ 360   1      	//Calculates Number of Data Sectors for CountofClus
+ 361   1      	DataSec = (TotSec - (RsvdSectorCount + ((NumFATS * FATSz) + Drive_values.RootDirSecs)));
+ 362   1      	
+ 363   1      	//Calculates CountofClus to use for determining FATtype
+ 364   1      	CountofClus = DataSec / Drive_values.SecPerClus;
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 7   
+
+ 365   1      
+ 366   1      	//Determines FAT type
+ 367   1      	if(CountofClus < 65525)
+ 368   1      	{
+ 369   2      		//FAT16
+ 370   2      		Drive_values.FATtype = FAT16;
+ 371   2      		error_flag = FAT_Unsupported;
+ 372   2      	}
+ 373   1      	else
+ 374   1      	{
+ 375   2      		//FAT32
+ 376   2      		Drive_values.FATtype = FAT32;
+ 377   2      	}
+ 378   1      	//printf("FATtype Detected: %x\r\n", Drive_values.FATtype);
+ 379   1      	return error_flag;
+ 380   1      }
+ 381          
+ 382          uint32_t First_Sector (uint32_t Cluster_num)
+ 383          {
+ 384   1          uint32_t FirstSecCluster;
+ 385   1          if(Cluster_num==0)
+ 386   1          {
+ 387   2              FirstSecCluster = Drive_values.FirstRootDirSec;
+ 388   2          }
+ 389   1          else
+ 390   1          {
+ 391   2              FirstSecCluster = ((Cluster_num-2)*Drive_values.SecPerClus)+Drive_values.FirstDataSec;
+ 392   2          }
+ 393   1          return FirstSecCluster;
+ 394   1      }
+ 395          
+ 396          uint32_t Find_Next_Clus(uint32_t Cluster_num, uint8_t xdata * array_name)
+ 397          {
+ 398   1          uint32_t return_clus;
+ 399   1      	uint16_t FAToffset;
+ 400   1      	uint32_t sector = ((Cluster_num*4)/Drive_values.BytesPerSec)+Drive_values.StartofFAT;
+ 401   1      	Read_Sector(sector,Drive_values.BytesPerSec,array_name);
+ 402   1      	FAToffset = (uint16_t) ((4*Cluster_num)%Drive_values.BytesPerSec);
+ 403   1      	return_clus = (read32(FAToffset,array_name)&0x0FFFFFFF);
+ 404   1      	
+ 405   1          return return_clus;
+ 406   1      }
+ 407          
+ 408          uint8_t Open_File(uint32_t Cluster, uint8_t xdata * array_in)
+ 409          {
+ 410   1      	uint8_t error_flag = no_errors;
+ 411   1      	uint32_t sector_num;
+ 412   1      	uint32_t first_sec_num;
+ 413   1      	printf("cluster_number:: %lx",Cluster);
+ 414   1      	do
+ 415   1      	{
+ 416   2      		first_sec_num = First_Sector(Cluster);
+ 417   2      		printf("first_sec_num:: %lx",first_sec_num);
+ 418   2      		sector_num = first_sec_num;
+ 419   2      		while(sector_num!=Drive_values.SecPerClus+first_sec_num)
+ 420   2      		{
+ 421   3      			error_flag = Read_Sector(sector_num,Drive_values.BytesPerSec, array_in);
+ 422   3      			sector_num++;
+ 423   3      			//print_memory(array_in,512);
+ 424   3      		}
+ 425   2      		Cluster = Find_Next_Clus(Cluster,array_in);
+ 426   2      	}while(Cluster!=0x0FFFFFFF);
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:16:56 PAGE 8   
+
+ 427   1      	return error_flag;
+ 428   1      }
+ 429          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2641    ----
+   CONSTANT SIZE    =    247    ----
+   XDATA SIZE       =   ----       8
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----     142
+   IDATA SIZE       =     22    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
