@@ -264,7 +264,6 @@ uint32_t Read_Dir_Entry(uint32_t Sector_num, uint16_t Entry, uint8_t xdata * arr
 
 uint8_t Mount_Drive(uint8_t xdata * array_name)
 {
-	//uint8_t i;
 	uint8_t temp_8;
 	uint8_t error_flag;
 	// Below are constants from BPB used for calculations
@@ -303,6 +302,7 @@ uint8_t Mount_Drive(uint8_t xdata * array_name)
 			printf("BPB Found!\r\n");
 		}
 	}
+	// All the BPB calculations are below
 	Drive_values.BytesPerSec = read16(0x0B,array_name);
 	Drive_values.SecPerClus = read8(0x0D,array_name);
 	RsvdSectorCount = read16(0x0E,array_name);
