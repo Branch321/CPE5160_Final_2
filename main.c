@@ -118,6 +118,7 @@ main()
 
 	  LEDS_ON(Green_LED);
 	  cluster_num = Read_Dir_Entry(current_directory_sector, block_num, buffer1);
+     LCD_Print(line1,0,buffer1[block_num]);
 	  if((cluster_num &directory_bit)!=0) // directory mask
 	  {
 	  	  printf("Entry is a directory...Opening now...\r\n");
