@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:27:38 PAGE 1   
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:31:21 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ stmt level    source
   51   2         }
   52   1         
   53   1         P2_set_bit(0x0F);  // sets lower four bits of port 2 for switch inputs.
-C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:27:38 PAGE 2   
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:31:21 PAGE 2   
 
   54   1         LEDS_OFF(Amber_LED|Yellow_LED|Green_LED);
   55   1         LEDS_ON(Red_LED);
@@ -126,7 +126,7 @@ stmt level    source
  113   2            while ((block_num <= 0) || (block_num > num_entries))
  114   2            {
  115   3               printf("Invalid selection. Please select a valid entry.");
-C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:27:38 PAGE 3   
+C51 COMPILER V6.02  MAIN                                                                   12/10/2019 19:31:21 PAGE 3   
 
  116   3               block_num = long_serial_input();
  117   3            }

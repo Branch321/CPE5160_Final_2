@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     1
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     1
 
 
 MACRO ASSEMBLER A51 V6.02
@@ -65,7 +65,7 @@ LOC  OBJ            LINE     SOURCE
 0062 2817             56     DB 40, 23
 0064 2818             57     DB 40, 24
 0066 2819             58     DB 40, 25
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     2
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     2
 
 0068 2194             59     DB 33, 148
 006A 281A             60     DB 40, 26
@@ -133,7 +133,7 @@ LOC  OBJ            LINE     SOURCE
 00E6 284B            122     DB 40, 75
 00E8 284C            123     DB 40, 76
 00EA 284D            124     DB 40, 77
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     3
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     3
 
 00EC 284E            125     DB 40, 78
 00EE 284F            126     DB 40, 79
@@ -201,7 +201,7 @@ LOC  OBJ            LINE     SOURCE
 016A 288B            188     DB 40, 139
 016C 288C            189     DB 40, 140
 016E 288D            190     DB 40, 141
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     4
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     4
 
 0170 288E            191     DB 40, 142
 0172 288F            192     DB 40, 143
@@ -269,7 +269,7 @@ LOC  OBJ            LINE     SOURCE
 01EE 219B            254     DB 33, 155
 01F0 28C4            255     DB 40, 196
 01F2 2100            256     DB 33, 0
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     5
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     5
 
 01F4 28C5            257     DB 40, 197
 01F6 28C6            258     DB 40, 198
@@ -337,7 +337,7 @@ LOC  OBJ            LINE     SOURCE
 0272 219E            320     DB 33, 158
 0274 28FC            321     DB 40, 252
 0276 208E            322     DB 32, 142
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     6
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     6
 
 0278 219F            323     DB 33, 159
 027A 28FD            324     DB 40, 253
@@ -405,7 +405,7 @@ LOC  OBJ            LINE     SOURCE
 02F6 2104            386     DB 33, 4
 02F8 2204            387     DB 34, 4
 02FA 26AA            388     DB 38, 170
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     7
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     7
 
 02FC 270A            389     DB 39, 10
 02FE 280A            390     DB 40, 10
@@ -473,7 +473,7 @@ LOC  OBJ            LINE     SOURCE
 037A 2395            452     DB 35, 149
 037C 2600            453     DB 38, 0
 037E 2708            454     DB 39, 8
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     8
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     8
 
 0380 2816            455     DB 40, 22
 0382 2100            456     DB 33, 0
@@ -541,7 +541,7 @@ LOC  OBJ            LINE     SOURCE
 03FE 2104            518     DB 33, 4
 0400 2200            519     DB 34, 0
 0402 2380            520     DB 35, 128
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE     9
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE     9
 
 0404 2400            521     DB 36, 0
 0406 25FC            522     DB 37, 252
@@ -609,7 +609,7 @@ LOC  OBJ            LINE     SOURCE
 0482 2102            584     DB 33, 2
 0484 2380            585     DB 35, 128
 0486 2486            586     DB 36, 134
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    10
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    10
 
 0488 25C3            587     DB 37, 195
 048A 26AB            588     DB 38, 171
@@ -677,7 +677,7 @@ LOC  OBJ            LINE     SOURCE
 0506 2507            650     DB 37, 7
 0508 2624            651     DB 38, 36
 050A 2700            652     DB 39, 0
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    11
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    11
 
 050C 2836            653     DB 40, 54
 050E 21BC            654     DB 33, 188
@@ -745,7 +745,7 @@ LOC  OBJ            LINE     SOURCE
 058A 25C0            716     DB 37, 192
 058C 26AB            717     DB 38, 171
 058E 270A            718     DB 39, 10
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    12
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    12
 
 0590 2841            719     DB 40, 65
 0592 210C            720     DB 33, 12
@@ -813,7 +813,7 @@ LOC  OBJ            LINE     SOURCE
 060E 2849            782     DB 40, 73
 0610 2100            783     DB 33, 0
 0612 2300            784     DB 35, 0
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    13
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    13
 
 0614 2409            785     DB 36, 9
 0616 2500            786     DB 37, 0
@@ -881,7 +881,7 @@ LOC  OBJ            LINE     SOURCE
 0692 2853            848     DB 40, 83
 0694 2114            849     DB 33, 20
 0696 2201            850     DB 34, 1
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    14
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    14
 
 0698 2395            851     DB 35, 149
 069A 2600            852     DB 38, 0
@@ -949,7 +949,7 @@ LOC  OBJ            LINE     SOURCE
 0716 2704            914     DB 39, 4
 0718 285E            915     DB 40, 94
 071A 2116            916     DB 33, 22
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    15
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    15
 
 071C 2201            917     DB 34, 1
 071E 2395            918     DB 35, 149
@@ -1017,7 +1017,7 @@ LOC  OBJ            LINE     SOURCE
 079A 2300            980     DB 35, 0
 079C 2401            981     DB 36, 1
 079E 25C0            982     DB 37, 192
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    16
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    16
 
 07A0 26AB            983     DB 38, 171
 07A2 2869            984     DB 40, 105
@@ -1085,7 +1085,7 @@ LOC  OBJ            LINE     SOURCE
 081E 2489           1046     DB 36, 137
 0820 2507           1047     DB 37, 7
 0822 2873           1048     DB 40, 115
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    17
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    17
 
 0824 2003           1049     DB 32, 3
 0826 213C           1050     DB 33, 60
@@ -1153,7 +1153,7 @@ LOC  OBJ            LINE     SOURCE
 08A2 2708           1112     DB 39, 8
 08A4 287D           1113     DB 40, 125
 08A6 2127           1114     DB 33, 39
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    18
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    18
 
 08A8 2300           1115     DB 35, 0
 08AA 2481           1116     DB 36, 129
@@ -1221,7 +1221,7 @@ LOC  OBJ            LINE     SOURCE
 0926 2887           1178     DB 40, 135
 0928 2380           1179     DB 35, 128
 092A 2486           1180     DB 36, 134
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    19
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    19
 
 092C 253B           1181     DB 37, 59
 092E 26AA           1182     DB 38, 170
@@ -1289,7 +1289,7 @@ LOC  OBJ            LINE     SOURCE
 09AA 2489           1244     DB 36, 137
 09AC 2548           1245     DB 37, 72
 09AE 26AA           1246     DB 38, 170
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    20
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    20
 
 09B0 270A           1247     DB 39, 10
 09B2 2892           1248     DB 40, 146
@@ -1357,7 +1357,7 @@ LOC  OBJ            LINE     SOURCE
 0A2E 2507           1310     DB 37, 7
 0A30 2626           1311     DB 38, 38
 0A32 270D           1312     DB 39, 13
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    21
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    21
 
 0A34 289D           1313     DB 40, 157
 0A36 2000           1314     DB 32, 0
@@ -1425,7 +1425,7 @@ LOC  OBJ            LINE     SOURCE
 0AB2 2612           1376     DB 38, 18
 0AB4 2704           1377     DB 39, 4
 0AB6 28A7           1378     DB 40, 167
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    22
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    22
 
 0AB8 2003           1379     DB 32, 3
 0ABA 21DE           1380     DB 33, 222
@@ -1493,7 +1493,7 @@ LOC  OBJ            LINE     SOURCE
 0B36 28B0           1442     DB 40, 176
 0B38 2042           1443     DB 32, 66
 0B3A 21DD           1444     DB 33, 221
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    23
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    23
 
 0B3C 2208           1445     DB 34, 8
 0B3E 2489           1446     DB 36, 137
@@ -1561,7 +1561,7 @@ LOC  OBJ            LINE     SOURCE
 0BBA 2507           1508     DB 37, 7
 0BBC 2612           1509     DB 38, 18
 0BBE 2708           1510     DB 39, 8
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    24
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    24
 
 0BC0 28BA           1511     DB 40, 186
 0BC2 2000           1512     DB 32, 0
@@ -1629,7 +1629,7 @@ LOC  OBJ            LINE     SOURCE
 0C3E 2200           1574     DB 34, 0
 0C40 2300           1575     DB 35, 0
 0C42 2401           1576     DB 36, 1
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    25
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    25
 
 0C44 25C0           1577     DB 37, 192
 0C46 26AB           1578     DB 38, 171
@@ -1697,7 +1697,7 @@ LOC  OBJ            LINE     SOURCE
 0CC2 2100           1640     DB 33, 0
 0CC4 2203           1641     DB 34, 3
 0CC6 2380           1642     DB 35, 128
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    26
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    26
 
 0CC8 2487           1643     DB 36, 135
 0CCA 257B           1644     DB 37, 123
@@ -1765,7 +1765,7 @@ LOC  OBJ            LINE     SOURCE
 0D46 2360           1706     DB 35, 96
 0D48 26A8           1707     DB 38, 168
 0D4A 2712           1708     DB 39, 18
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    27
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    27
 
 0D4C 28D6           1709     DB 40, 214
 0D4E 21AF           1710     DB 33, 175
@@ -1833,7 +1833,7 @@ LOC  OBJ            LINE     SOURCE
 0DCA 28E0           1772     DB 40, 224
 0DCC 2100           1773     DB 33, 0
 0DCE 2380           1774     DB 35, 128
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    28
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    28
 
 0DD0 2489           1775     DB 36, 137
 0DD2 26AA           1776     DB 38, 170
@@ -1901,7 +1901,7 @@ LOC  OBJ            LINE     SOURCE
 0E4E 21D3           1838     DB 33, 211
 0E50 220F           1839     DB 34, 15
 0E52 2489           1840     DB 36, 137
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    29
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    29
 
 0E54 2507           1841     DB 37, 7
 0E56 26AA           1842     DB 38, 170
@@ -1969,7 +1969,7 @@ LOC  OBJ            LINE     SOURCE
 0ED2 2200           1904     DB 34, 0
 0ED4 2380           1905     DB 35, 128
 0ED6 2486           1906     DB 36, 134
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    30
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    30
 
 0ED8 25C3           1907     DB 37, 195
 0EDA 26AB           1908     DB 38, 171
@@ -2037,7 +2037,7 @@ LOC  OBJ            LINE     SOURCE
 0F56 2395           1970     DB 35, 149
 0F58 2610           1971     DB 38, 16
 0F5A 2708           1972     DB 39, 8
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    31
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    31
 
 0F5C 28FC           1973     DB 40, 252
 0F5E 2000           1974     DB 32, 0
@@ -2105,7 +2105,7 @@ LOC  OBJ            LINE     SOURCE
 0FD2 5510           2036     DB 0x55, 0x10
 0FD4 0609           2037     DB 6, 9
 0FD6 0B02           2038     DB 11, 2
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    32
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    32
 
 0FD8 6105           2039     DB 97, 5
 0FDA 5006           2040     DB 80, 6
@@ -2124,7 +2124,7 @@ LOC  OBJ            LINE     SOURCE
 0FF4 FFFF           2053     DB 0xff, 0xff
                     2054     
                     2055     END
-A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:27:38 PAGE    33
+A51 MACRO ASSEMBLER  CONFIG                                                               12/10/2019 19:31:21 PAGE    33
 
 SYMBOL TABLE LISTING
 ------ ----- -------

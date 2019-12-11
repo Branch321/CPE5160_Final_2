@@ -85,7 +85,7 @@ void Play_MP3_file(uint32_t begin_cluster)
 		}
 		else
 		{
-			PCON|=0x01;
+			go_to_sleep();
 		}
 	}
 }

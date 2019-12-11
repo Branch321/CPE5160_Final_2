@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 1   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE SDCARD
@@ -62,7 +62,7 @@ stmt level    source
   53   3           error_flag=SPI_Transfer(SPI_send,&SPI_return);
   54   3         }
   55   2         else
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 2   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 2   
 
   56   2         {
   57   3           return_val=SPI_error;
@@ -126,7 +126,7 @@ stmt level    source
  115   1         else if(index==0)
  116   1         {
  117   2            return_val=sd_timeout_error;
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 3   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 3   
 
  118   2         }
  119   1         else
@@ -190,7 +190,7 @@ stmt level    source
  177   4                 error_flag=SPI_Transfer(0xFF,&SPI_return); 
  178   4                 index++;
  179   4              }while((SPI_return==0xFF)&&(index!=0)&&(error_flag==no_errors));          // wait for data token r
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 4   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 4   
 
              -esponse  
  180   3              if(error_flag!=no_errors)
@@ -254,7 +254,7 @@ stmt level    source
  238   2           printf("Response = %2.2bX\n\r",valsout[0]);
  239   2         }
  240   1         else
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 5   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 5   
 
  241   1         {
  242   2      	 LEDS_ON(Red_LED); //REDLED=0;  // indicates error has occured.
@@ -318,7 +318,7 @@ stmt level    source
  300   2         }
  301   1         if(error_status==no_errors)
  302   1         {
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 6   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 6   
 
  303   2           LEDS_ON(Green_LED);  //GREENLED=0;
  304   2           printf("CMD58 sent ... ");
@@ -382,7 +382,7 @@ stmt level    source
  362   3      	   }while(((valsout[0]&0x01)==0x01)&&(error_flag==no_errors));
  363   2      	 if(error_flag==no_errors)
  364   2           {
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 7   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 7   
 
  365   3              LEDS_OFF(Yellow_LED); //GREENLED=1;
  366   3      	    printf("Response = %2.2bX\n\r",valsout[0]);
@@ -446,7 +446,7 @@ stmt level    source
  424   6      		      }
  425   5      			}
  426   4      		 }
-C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:27:36 PAGE 8   
+C51 COMPILER V6.02  SDCARD                                                                 12/10/2019 19:31:19 PAGE 8   
 
  427   3           }
  428   2           else

@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 1   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE DIRECTORY_FUNCTIONS_STRUCT
@@ -62,7 +62,7 @@ stmt level    source
   53   2      	}
   54   1      	return return_value;
   55   1      }
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 2   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 2   
 
   56          
   57          uint32_t read32(uint16_t offset, uint8_t * array_name)
@@ -126,7 +126,7 @@ stmt level    source
  115   5      		      for(j=0;j<8;j++)
  116   5      			  {
  117   6      			     out_val=read8(i+j,values);   // print the 8 byte name
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 3   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 3   
 
  118   6      			     putchar(out_val);
  119   6      			  }
@@ -190,7 +190,7 @@ stmt level    source
  177          INPUT: Starting Sector of the directory, an entry number and a pointer to a 
  178          block of memory in xdata that can be used to read blocks from the SD card
  179          RETURNS: uint32_t with cluster in lower 28 bits.  Bit 28 set if this is 
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 4   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 4   
 
  180                   a directory entry, clear for a file.  Bit 31 set for error.
  181          CAUTION: 
@@ -254,7 +254,7 @@ stmt level    source
  239   4      			  if((Sector-Sector_num)<max_sectors)
  240   4      			  {
  241   5                       error_flag=Read_Sector(Sector,Drive_values.BytesPerSec,values);
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 5   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 5   
 
  242   5      			     if(error_flag!=no_errors)
  243   5      			     {
@@ -318,7 +318,7 @@ stmt level    source
  301   2      		{
  302   3      			printf("Error BPB not Found!\r\n");
  303   3      		}
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 6   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 6   
 
  304   2      		else
  305   2      		{
@@ -382,7 +382,7 @@ stmt level    source
  362   1      	
  363   1      	//Calculates CountofClus to use for determining FATtype
  364   1      	CountofClus = DataSec / Drive_values.SecPerClus;
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 7   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 7   
 
  365   1      
  366   1      	//Determines FAT type
@@ -446,7 +446,7 @@ stmt level    source
  424   2      	}while(Cluster!=0x0FFFFFFF);
  425   1      	return error_flag;
  426   1      }
-C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:27:33 PAGE 8   
+C51 COMPILER V6.02  DIRECTORY_FUNCTIONS_STRUCT                                             12/10/2019 19:31:16 PAGE 8   
 
  427          
 

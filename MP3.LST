@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:27:38 PAGE 1   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE MP3
@@ -62,7 +62,7 @@ stmt level    source
   53   1          TF0 = 0; // clear overflow flag
   54   1          TR0 = 1; // start timer 0
   55   1      }
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:27:38 PAGE 2   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 2   
 
   56          
   57          void Play_MP3_file(uint32_t begin_cluster)
@@ -96,7 +96,7 @@ stmt level    source
   85   3      		}
   86   2      		else
   87   2      		{
-  88   3      			PCON|=0x01;
+  88   3      			go_to_sleep();
   89   3      		}
   90   2      	}
   91   1      }
@@ -126,7 +126,7 @@ stmt level    source
  115   3      		}
  116   2      		case data_send_1:
  117   2      		{
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:27:38 PAGE 3   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 3   
 
  118   3      			//MP3_clock_reset();
  119   3      			while((DATA_REQ==0)&&(TF0==0))
@@ -190,7 +190,7 @@ stmt level    source
  177   5      					{
  178   6      						if(num_sectors_g==(Drive_p->SecPerClus))
  179   6      						{
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:27:38 PAGE 4   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 4   
 
  180   7      							play_state_g = locate_cluster_1;
  181   7      						}
@@ -254,7 +254,7 @@ stmt level    source
  239   3      			else
  240   3      			{
  241   4      				play_status_g=0;
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:27:38 PAGE 5   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 5   
 
  242   4      				play_state_g=data_idle_2;
  243   4      			}
