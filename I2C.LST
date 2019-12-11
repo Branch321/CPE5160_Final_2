@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 1   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE I2C
@@ -62,7 +62,7 @@ stmt level    source
   52   2      		return_value = I2C_write(device_addr,internal_addr, int_size,0,0);
   53   2      		//printf("Done sending an internal address for a read");
   54   2      	}
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 2   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 2   
 
   55   1      
   56   1      	// Default both SDA and SCL to 1
@@ -126,7 +126,7 @@ stmt level    source
  114   4      			}while(num_bits!=0);
  115   3      			// Store the byte in the array buffer
  116   3      			*(store_data_arr+index) = recv_value;
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 3   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 3   
 
  117   3      			index++;
  118   3      			num_bytes--;
@@ -190,7 +190,7 @@ stmt level    source
  176   1      	TL1 = I2C_RELOAD_L;
  177   1      	TF1 = 0;
  178   1      	TR1 = 1;
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 4   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 4   
 
  179   1      }
  180          
@@ -254,7 +254,7 @@ stmt level    source
  237   3      			//printf("Sending internal Address..\r\n");
  238   3      			do
  239   3      			{
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 5   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 5   
 
  240   4      				I2C_clock_delay(Continue);
  241   4      				SCL = 0; // Pull clock low to transition to new bit
@@ -318,7 +318,7 @@ stmt level    source
  299   1      	// stop condition
  300   1      	if(return_value!=bus_busy_error)
  301   1      	{
-C51 COMPILER V6.02  I2C                                                                    12/10/2019 19:31:20 PAGE 6   
+C51 COMPILER V6.02  I2C                                                                    12/10/2019 21:03:59 PAGE 6   
 
  302   2      		I2C_clock_delay(Continue);
  303   2      		SCL=0;

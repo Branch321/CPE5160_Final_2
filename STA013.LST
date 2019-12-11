@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  STA013                                                                 12/10/2019 19:31:21 PAGE 1   
+C51 COMPILER V6.02  STA013                                                                 12/10/2019 21:03:59 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE STA013
@@ -34,66 +34,60 @@ stmt level    source
   25   2      		return_value = I2C_read(STA013_device_addr,0,0,1,recv_array);
   26   2      		index--;
   27   2      	}while((return_value!=no_errors)&&(index!=0));
-  28   1      	printf("Received Value = %2.2bX\n\r",recv_array[0]);
-  29   1      
-  30   1      	printf("--------------------Config 1 Go!!!!--------------------\r\n");
-  31   1      	return_value = STA013_config(0x43, &CONFIG);
-  32   1      	if(return_value!=no_errors)
-  33   1      	{
-  34   2      		printf("We got problems!");
-  35   2      	}
-  36   1          Timer0_DELAY_1ms(1000);
-  37   1      	printf("--------------------Config 2 Go!!!!--------------------\r\n");
-  38   1          return_value = STA013_config(0x43, &CONFIG2);
-  39   1      	if(return_value!=no_errors)
-  40   1      	{
-  41   2      		printf("We got problems!");
-  42   2      	}
-  43   1          Timer0_DELAY_1ms(1000);  
-  44   1      	printf("--------------------Config 3 Go!!!!--------------------\r\n");
-  45   1          return_value = STA013_config(0x43, &CONFIG3);
-  46   1      	if(return_value!=no_errors)
-  47   1      	{
-  48   2      		printf("We got problems!");
-  49   2      	}
-  50   1          Timer0_DELAY_1ms(1000);  
-  51   1      	printf("Finished Init...\r\n");
-  52   1      	return return_value;
-  53   1      }
-  54          
-  55          
-C51 COMPILER V6.02  STA013                                                                 12/10/2019 19:31:21 PAGE 2   
+  28   1      	return_value = STA013_config(0x43, &CONFIG);
+  29   1      	if(return_value!=no_errors)
+  30   1      	{
+  31   2      		printf("We got problems!");
+  32   2      	}
+  33   1          Timer0_DELAY_1ms(1000);
+  34   1          return_value = STA013_config(0x43, &CONFIG2);
+  35   1      	if(return_value!=no_errors)
+  36   1      	{
+  37   2      		printf("We got problems!");
+  38   2      	}
+  39   1          Timer0_DELAY_1ms(1000);  
+  40   1          return_value = STA013_config(0x43, &CONFIG3);
+  41   1      	if(return_value!=no_errors)
+  42   1      	{
+  43   2      		printf("We got problems!");
+  44   2      	}
+  45   1          Timer0_DELAY_1ms(1000);  
+  46   1      	return return_value;
+  47   1      }
+  48          
+  49          
+  50          uint8_t STA013_config(uint8_t device_addr, uint8_t * config_array)
+  51          {
+  52   1          uint8_t send_array[1];
+  53   1      	uint8_t recv_array[1];
+  54   1          uint8_t internal_addr; // address fro config file
+  55   1      	uint8_t timeout;
+C51 COMPILER V6.02  STA013                                                                 12/10/2019 21:03:59 PAGE 2   
 
-  56          uint8_t STA013_config(uint8_t device_addr, uint8_t * config_array)
-  57          {
-  58   1          uint8_t send_array[1];
-  59   1      	uint8_t recv_array[1];
-  60   1          uint8_t internal_addr; // address fro config file
-  61   1      	uint8_t timeout;
-  62   1      	uint8_t status; // variable to hold error
-  63   1          uint16_t index = 0;
-  64   1          
-  65   1          do 
-  66   1      	{
-  67   2              timeout = 50; // simple timeout
-  68   2              internal_addr = config_array[index];
-  69   2              ++index;
-  70   2              send_array[0] = config_array[index]; // data to set to address from config file
-  71   2              ++index;
-  72   2              do
-  73   2      		{
-  74   3                  status = I2C_write(device_addr, internal_addr, 1, 1, send_array);
-  75   3                  --timeout;
-  76   3              } while ((status != no_errors) && (timeout != 0));
-  77   2      		I2C_read(device_addr, internal_addr,1,1,recv_array);
-  78   2          } while ((internal_addr != 0xFF) && (timeout != 0)); // 0xFF is the end of the config file
-  79   1          return status;
-  80   1      }
+  56   1      	uint8_t status; // variable to hold error
+  57   1          uint16_t index = 0;
+  58   1          
+  59   1          do 
+  60   1      	{
+  61   2              timeout = 50; // simple timeout
+  62   2              internal_addr = config_array[index];
+  63   2              ++index;
+  64   2              send_array[0] = config_array[index]; // data to set to address from config file
+  65   2              ++index;
+  66   2              do
+  67   2      		{
+  68   3                  status = I2C_write(device_addr, internal_addr, 1, 1, send_array);
+  69   3                  --timeout;
+  70   3              } while ((status != no_errors) && (timeout != 0));
+  71   2      		I2C_read(device_addr, internal_addr,1,1,recv_array);
+  72   2          } while ((internal_addr != 0xFF) && (timeout != 0)); // 0xFF is the end of the config file
+  73   1          return status;
+  74   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    361    ----
-   CONSTANT SIZE    =    236    ----
+   CODE SIZE        =    313    ----
+   CONSTANT SIZE    =     17    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----      19

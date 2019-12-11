@@ -11,9 +11,9 @@
 #include "print_bytes.h"
 #include "Directory_Functions_struct.h"
 #include "Read_Sector.h"
-#include <string.h>
 #include "print_bytes.h"
 #include "Long_Serial_In.h"
+#include <string.h>
 
 FS_values_t idata Drive_values;
 
@@ -289,7 +289,6 @@ uint8_t Mount_Drive(uint8_t xdata * array_name)
 	temp_8 = read8(0,array_name);
 	if((temp_8!=0xEB)&&(temp_8!=0xE9))
 	{
-		printf("Found MBR...\r\n");
 		RelativeSectors = read32(0x01C6,array_name);
 		error_flag = Read_Sector(RelativeSectors ,512,array_name);
 		temp_8 = read8(0,array_name);

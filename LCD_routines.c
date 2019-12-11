@@ -25,7 +25,7 @@ void LCD_Init(void)
 
 
 
-void LCD_print(uint8_t address, uint8_t num_bytes, uint8_t *array_name_p)
+void LCD_Print(uint8_t address, uint8_t num_bytes, uint8_t *array_name_p)
 {
    uint8_t index,character;
    if(address!=no_addr_change)

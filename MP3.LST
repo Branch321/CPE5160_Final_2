@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 1   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 21:04:00 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE MP3
@@ -7,86 +7,86 @@ COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE .\MP3.c DEBUG OBJECTEXTEND
 
 stmt level    source
 
-   1          #include "MP3.h"
-   2          #include "Directory_Functions_struct.h"
-   3          #include "sEOS.h"
-   4          #include "main.h"
-   5          #include "PORT.H"
-   6          #include "Read_Sector.h"
-   7          #include "SPI.h"
-   8          #include "print_bytes.h"
-   9          #include <stdio.h>
-  10          #include "LED_Control.h"
-  11          
-  12          #define send_data_1 0 //same as below
-  13          #define data_send_1 0 // same as above //need to combine
-  14          #define data_idle_1 1
-  15          #define locate_cluster_2 2
-  16          #define load_buf_2 3
-  17          #define data_send_2 4
-  18          #define load_buf_1 5
-  19          #define data_idle_2 6
-  20          #define locate_cluster_1 7
-  21          #define data_send_2 4
-  22          #define send_data_2 4
-  23          
-  24          #define MP3_TIMEOUT 11
-  25          #define MP3_RELOAD (65536-(OSC_FREQ*MP3_TIMEOUT)/(OSC_PER_INST*1000))
-  26          #define MP3_RELOAD_H (MP3_RELOAD/256)
-  27          #define MP3_RELOAD_L (MP3_RELOAD%256)
+   1          /* Names: Tyler Andrews, Tyler Tetens, and Brennan Campbell
+   2           * Assignment: Final MP3 Player
+   3           * Professor: Mr Younger
+   4          */
+   5          
+   6          #include "MP3.h"
+   7          #include "Directory_Functions_struct.h"
+   8          #include "sEOS.h"
+   9          #include "main.h"
+  10          #include "PORT.H"
+  11          #include "Read_Sector.h"
+  12          #include "SPI.h"
+  13          #include "print_bytes.h"
+  14          #include "LED_Control.h"
+  15          #include <stdio.h>
+  16          
+  17          // State machine variables below
+  18          #define data_send_1 0
+  19          #define data_idle_1 1
+  20          #define locate_cluster_2 2
+  21          #define load_buf_2 3
+  22          #define data_send_2 4
+  23          #define load_buf_1 5
+  24          #define data_idle_2 6
+  25          #define locate_cluster_1 7
+  26          #define data_send_2 4
+  27          
   28          
-  29          sbit BIT_EN = P1^3;
-  30          sbit DATA_REQ = P1^2;
-  31          
-  32          extern xdata uint8_t buffer1[512];
-  33          extern xdata uint8_t buffer2[512];
-  34          
-  35          FS_values_t * Drive_p;
-  36          uint32_t idata cluster_g;
-  37          uint32_t idata sector_g;
-  38          uint32_t idata num_sectors_g;
-  39          uint32_t idata index1_g;
-  40          uint32_t idata index2_g;
-  41          uint8_t idata play_state_g;
-  42          uint8_t idata play_status_g;
-  43          
-  44          
-  45          void MP3_clock_reset(void) 
-  46          {
-  47   1          TR0 = 0; // stop timer for reload
-  48   1          
-  49   1          // reload timer
-  50   1          TH0 = MP3_RELOAD_H;
-  51   1          TL0 = MP3_RELOAD_L;
-  52   1      
-  53   1          TF0 = 0; // clear overflow flag
-  54   1          TR0 = 1; // start timer 0
-  55   1      }
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 2   
+  29          #define MP3_TIMEOUT 11
+  30          #define MP3_RELOAD (65536-(OSC_FREQ*MP3_TIMEOUT)/(OSC_PER_INST*1000))
+  31          #define MP3_RELOAD_H (MP3_RELOAD/256)
+  32          #define MP3_RELOAD_L (MP3_RELOAD%256)
+  33          
+  34          // buffers come from main.c
+  35          extern xdata uint8_t buffer1[512];
+  36          extern xdata uint8_t buffer2[512];
+  37          
+  38          // Globals used for both the ISR and Play_MP3_file
+  39          FS_values_t * Drive_p;
+  40          uint32_t idata cluster_g;
+  41          uint32_t idata sector_g;
+  42          uint32_t idata num_sectors_g;
+  43          uint32_t idata index1_g;
+  44          uint32_t idata index2_g;
+  45          uint8_t idata play_state_g;
+  46          uint8_t idata play_status_g;
+  47          
+  48          
+  49          void MP3_clock_reset(void) 
+  50          {
+  51   1          TR0 = 0; // stop timer for reload
+  52   1          
+  53   1          // reload timer
+  54   1          TH0 = MP3_RELOAD_H;
+  55   1          TL0 = MP3_RELOAD_L;
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 21:04:00 PAGE 2   
 
-  56          
-  57          void Play_MP3_file(uint32_t begin_cluster)
-  58          {
-  59   1      	//printf("Playing file now...");
-  60   1      	Drive_p = Export_Drive_values();
-  61   1      	cluster_g = begin_cluster;
-  62   1      	sector_g = First_Sector(begin_cluster);
-  63   1      	num_sectors_g=0;
-  64   1      	//printf("cluster_g:: %lx\r\n",cluster_g);
-  65   1      	//printf("sector_g:: %lx\r\n",sector_g);
-  66   1      	//printf("bytes_per_sec:: %lx\r\n",Drive_p->BytesPerSec);
-  67   1      	Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer1);
-  68   1      	//print_memory(buffer1,512);
+  56   1      
+  57   1          TF0 = 0; // clear overflow flag
+  58   1          TR0 = 1; // start timer 0
+  59   1      }
+  60          
+  61          void Play_MP3_file(uint32_t begin_cluster)
+  62          {
+  63   1      	Drive_p = Export_Drive_values();
+  64   1      	cluster_g = begin_cluster;
+  65   1      	sector_g = First_Sector(begin_cluster);
+  66   1      	num_sectors_g=0;
+  67   1      	// Load both buffers
+  68   1      	Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer1);
   69   1      	num_sectors_g++;
   70   1      	index1_g=0;
   71   1      	Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer2);
-  72   1      	//print_memory(buffer2,512);
-  73   1      	num_sectors_g++;
-  74   1      	index2_g=0;
-  75   1      
-  76   1      	play_state_g=send_data_1;
-  77   1      	play_status_g=1;
-  78   1      	sEOS_init(12);
+  72   1      	num_sectors_g++;
+  73   1      	index2_g=0;
+  74   1      
+  75   1      	play_state_g=data_send_1;
+  76   1      	play_status_g=1;
+  77   1      	sEOS_init(12);
+  78   1      	// Loop until song has finished playing
   79   1      	while(1)
   80   1      	{
   81   2      		if(play_status_g==0)
@@ -124,11 +124,11 @@ stmt level    source
  113   4      			}
  114   3      			break;
  115   3      		}
- 116   2      		case data_send_1:
- 117   2      		{
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 3   
+ 116   2      		// Send data while decoder is requesting data and timer hasn't overflowed
+ 117   2      		case data_send_1:
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 21:04:00 PAGE 3   
 
- 118   3      			//MP3_clock_reset();
+ 118   2      		{
  119   3      			while((DATA_REQ==0)&&(TF0==0))
  120   3      			{
  121   4      				BIT_EN=1;
@@ -155,7 +155,7 @@ stmt level    source
  142   5      					TF0=1;
  143   5      				}
  144   4      			}
- 145   3      			if((DATA_REQ==1)&&(play_state_g==send_data_1))
+ 145   3      			if((DATA_REQ==1)&&(play_state_g==data_send_1))
  146   3      			{
  147   4      				if(index2_g>511)
  148   4      				{
@@ -168,118 +168,114 @@ stmt level    source
  155   6      						play_state_g=load_buf_2;
  156   6      					}
  157   5      				}
- 158   4      				//else
- 159   4      				//{
- 160   4      					//play_state_g=update_lcd_1; //dont know about this one yet 
- 161   4      				//}
- 162   4      			}
- 163   3      			break;
- 164   3      		}
- 165   2      		case data_send_2:
- 166   2      		{
- 167   3      			//MP3_clock_reset();
- 168   3      			while((DATA_REQ==0)&&(TF0==0))
- 169   3      			{
- 170   4      				BIT_EN=1;
- 171   4      				SPI_Transfer(buffer2[index2_g],&temp8);
- 172   4      				BIT_EN=0;
- 173   4      				index2_g++;
- 174   4      				if(index2_g>511)
- 175   4      				{
- 176   5      					if(index1_g>511)
- 177   5      					{
- 178   6      						if(num_sectors_g==(Drive_p->SecPerClus))
+ 158   4      			}
+ 159   3      			break;
+ 160   3      		}
+ 161   2      		// Send data while decoder is requesting data and timer hasn't overflowed
+ 162   2      		case data_send_2:
+ 163   2      		{
+ 164   3      			while((DATA_REQ==0)&&(TF0==0))
+ 165   3      			{
+ 166   4      				BIT_EN=1;
+ 167   4      				SPI_Transfer(buffer2[index2_g],&temp8);
+ 168   4      				BIT_EN=0;
+ 169   4      				index2_g++;
+ 170   4      				if(index2_g>511)
+ 171   4      				{
+ 172   5      					if(index1_g>511)
+ 173   5      					{
+ 174   6      						if(num_sectors_g==(Drive_p->SecPerClus))
+ 175   6      						{
+ 176   7      							play_state_g = locate_cluster_1;
+ 177   7      						}
+ 178   6      						else
  179   6      						{
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 4   
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 21:04:00 PAGE 4   
 
- 180   7      							play_state_g = locate_cluster_1;
+ 180   7      							play_state_g=load_buf_1;
  181   7      						}
- 182   6      						else
- 183   6      						{
- 184   7      							play_state_g=load_buf_1;
- 185   7      						}
+ 182   6      					}
+ 183   5      					else
+ 184   5      					{
+ 185   6      						play_state_g=data_send_1;
  186   6      					}
- 187   5      					else
- 188   5      					{
- 189   6      						play_state_g=data_send_1;
- 190   6      					}
- 191   5      					TF0=1;
- 192   5      				}
- 193   4      			}
- 194   3      			if((DATA_REQ==1)&&(play_state_g==send_data_2))
- 195   3      			{
- 196   4      				if(index1_g>511)
- 197   4      				{
- 198   5      					if(num_sectors_g==(Drive_p->SecPerClus))
+ 187   5      					TF0=1;
+ 188   5      				}
+ 189   4      			}
+ 190   3      			if((DATA_REQ==1)&&(play_state_g==data_send_2))
+ 191   3      			{
+ 192   4      				if(index1_g>511)
+ 193   4      				{
+ 194   5      					if(num_sectors_g==(Drive_p->SecPerClus))
+ 195   5      					{
+ 196   6      						play_state_g=locate_cluster_1;
+ 197   6      					}
+ 198   5      					else
  199   5      					{
- 200   6      						play_state_g=locate_cluster_1;
+ 200   6      						play_state_g=load_buf_1;
  201   6      					}
- 202   5      					else
- 203   5      					{
- 204   6      						play_state_g=load_buf_1;
- 205   6      					}
- 206   5      				}
- 207   4      				//else
- 208   4      				//{
- 209   4      					//play_state_g=update_lcd_1; //dont know about this one yet 
- 210   4      				//}
- 211   4      			}
- 212   3      			break;
- 213   3      		}
- 214   2      		case load_buf_1:
- 215   2      		{
- 216   3      			Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer1);
- 217   3      			num_sectors_g++;
- 218   3      			index1_g=0;
- 219   3      			play_state_g=data_idle_2;
- 220   3      			break;
- 221   3      		}
- 222   2      		case load_buf_2:
- 223   2      		{
- 224   3      			Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer2);
- 225   3      			num_sectors_g++;
- 226   3      			index2_g=0;
- 227   3      			play_state_g=data_idle_1;
- 228   3      			break;
- 229   3      		}
- 230   2      		case locate_cluster_1:
- 231   2      		{
- 232   3      			cluster_g = Find_Next_Clus(cluster_g,&buffer1);
- 233   3      			if(cluster_g!=0x0FFFFFFF)
- 234   3      			{
- 235   4      				sector_g = First_Sector(cluster_g);
- 236   4      				num_sectors_g=0;
+ 202   5      				}
+ 203   4      			}
+ 204   3      			break;
+ 205   3      		}
+ 206   2      		// Loads buffer_1 and transitions to idle_2
+ 207   2      		case load_buf_1:
+ 208   2      		{
+ 209   3      			Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer1);
+ 210   3      			num_sectors_g++;
+ 211   3      			index1_g=0;
+ 212   3      			play_state_g=data_idle_2;
+ 213   3      			break;
+ 214   3      		}
+ 215   2      		// Loads buffer_2 and transitions to idle_1
+ 216   2      		case load_buf_2:
+ 217   2      		{
+ 218   3      			Read_Sector((sector_g+num_sectors_g),(Drive_p->BytesPerSec),&buffer2);
+ 219   3      			num_sectors_g++;
+ 220   3      			index2_g=0;
+ 221   3      			play_state_g=data_idle_1;
+ 222   3      			break;
+ 223   3      		}
+ 224   2      		// If the sectors runout, find the next cluster
+ 225   2      		case locate_cluster_1:
+ 226   2      		{
+ 227   3      			cluster_g = Find_Next_Clus(cluster_g,&buffer1);
+ 228   3      			if(cluster_g!=0x0FFFFFFF)
+ 229   3      			{
+ 230   4      				sector_g = First_Sector(cluster_g);
+ 231   4      				num_sectors_g=0;
+ 232   4      				play_state_g=data_idle_2;
+ 233   4      			}
+ 234   3      			else
+ 235   3      			{
+ 236   4      				play_status_g=0;
  237   4      				play_state_g=data_idle_2;
  238   4      			}
- 239   3      			else
- 240   3      			{
- 241   4      				play_status_g=0;
-C51 COMPILER V6.02  MP3                                                                    12/10/2019 19:31:21 PAGE 5   
+ 239   3      			break;
+ 240   3      		}
+ 241   2      		// If the sectors runout, find the next cluster
+C51 COMPILER V6.02  MP3                                                                    12/10/2019 21:04:00 PAGE 5   
 
- 242   4      				play_state_g=data_idle_2;
- 243   4      			}
- 244   3      			break;
- 245   3      		}
- 246   2      		case locate_cluster_2:
- 247   2      		{
- 248   3      			cluster_g = Find_Next_Clus(cluster_g,&buffer2);
- 249   3      			if(cluster_g!=0x0FFFFFFF)
- 250   3      			{
- 251   4      				sector_g = First_Sector(cluster_g);
- 252   4      				num_sectors_g=0;
- 253   4      				play_state_g=data_idle_1;
- 254   4      			}
- 255   3      			else
- 256   3      			{
- 257   4      				play_status_g=0;
- 258   4      				play_state_g=data_idle_1;
- 259   4      			}
- 260   3      			break;
- 261   3      		}
- 262   2      	}//end of switch case
- 263   1      }
- 264          
- 265          
+ 242   2      		case locate_cluster_2:
+ 243   2      		{
+ 244   3      			cluster_g = Find_Next_Clus(cluster_g,&buffer2);
+ 245   3      			if(cluster_g!=0x0FFFFFFF)
+ 246   3      			{
+ 247   4      				sector_g = First_Sector(cluster_g);
+ 248   4      				num_sectors_g=0;
+ 249   4      				play_state_g=data_idle_1;
+ 250   4      			}
+ 251   3      			else
+ 252   3      			{
+ 253   4      				play_status_g=0;
+ 254   4      				play_state_g=data_idle_1;
+ 255   4      			}
+ 256   3      			break;
+ 257   3      		}
+ 258   2      	}
+ 259   1      }
+ 260          
+ 261          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

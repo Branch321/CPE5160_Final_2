@@ -36,6 +36,8 @@ sbit nCS0 = P1^4;
 sbit per_MISO = P1^5;
 sbit per_SCLK = P1^6;
 sbit per_MOSI = P1^7;
+sbit BIT_EN = P1^3;
+sbit DATA_REQ = P1^2;
 
 #define nCS0_bit 1<<4
 

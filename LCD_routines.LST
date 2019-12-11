@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  LCD_ROUTINES                                                           12/10/2019 19:31:17 PAGE 1   
+C51 COMPILER V6.02  LCD_ROUTINES                                                           12/10/2019 21:03:56 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE LCD_ROUTINES
@@ -35,7 +35,7 @@ stmt level    source
   25          
   26          
   27          
-  28          void LCD_print(uint8_t address, uint8_t num_bytes, uint8_t *array_name_p)
+  28          void LCD_Print(uint8_t address, uint8_t num_bytes, uint8_t *array_name_p)
   29          {
   30   1         uint8_t index,character;
   31   1         if(address!=no_addr_change)
@@ -62,7 +62,7 @@ stmt level    source
   52   3                character=*(array_name_p+index);
   53   3                LCD_Write(DDRAM,character);
   54   3                Timer0_DELAY_1ms(1);
-C51 COMPILER V6.02  LCD_ROUTINES                                                           12/10/2019 19:31:17 PAGE 2   
+C51 COMPILER V6.02  LCD_ROUTINES                                                           12/10/2019 21:03:56 PAGE 2   
 
   55   3             }
   56   2          }     

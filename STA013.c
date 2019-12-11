@@ -25,30 +25,24 @@ uint8_t STA013_init(void)
 		return_value = I2C_read(STA013_device_addr,0,0,1,recv_array);
 		index--;
 	}while((return_value!=no_errors)&&(index!=0));
-	printf("Received Value = %2.2bX\n\r",recv_array[0]);
-
-	printf("--------------------Config 1 Go!!!!--------------------\r\n");
 	return_value = STA013_config(0x43, &CONFIG);
 	if(return_value!=no_errors)
 	{
 		printf("We got problems!");
 	}
     Timer0_DELAY_1ms(1000);
-	printf("--------------------Config 2 Go!!!!--------------------\r\n");
     return_value = STA013_config(0x43, &CONFIG2);
 	if(return_value!=no_errors)
 	{
 		printf("We got problems!");
 	}
     Timer0_DELAY_1ms(1000);  
-	printf("--------------------Config 3 Go!!!!--------------------\r\n");
     return_value = STA013_config(0x43, &CONFIG3);
 	if(return_value!=no_errors)
 	{
 		printf("We got problems!");
 	}
     Timer0_DELAY_1ms(1000);  
-	printf("Finished Init...\r\n");
 	return return_value;
 }
 

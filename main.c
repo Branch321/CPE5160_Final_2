@@ -17,10 +17,11 @@
 #include "LED_Control.h"
 #include "Directory_Functions_struct.h"
 #include "Read_Sector.h"
-#include <stdio.h>
 #include "sEOS.h"
 #include "STA013.h"
 #include "MP3.h"
+#include "LCD_routines.h"
+#include <stdio.h>
 
 uint8_t code SD_start[]="SD Card Init...";
 uint8_t code SDSC[]="Std. Capacity";
@@ -57,12 +58,12 @@ main()
    while(i<=60000) i++;
    LEDS_OFF(Red_LED);
    uart_init(9600);
-   printf("Done initalizing uart!\r\n");
+   printf("Done initalizing UART!\r\n");
    LCD_Init();
    printf("Done initalizing LCD!\r\n");
    LCD_Print(line1,0,SD_start);   
    error_flag=SPI_Master_Init(400000UL);
-   printf("Starting SPI\r\n");
+   printf("Done initalizing SPI!\r\n");
    STA013_init();
    printf("Done initalizing STA013!\r\n");
    if(error_flag!=no_errors)
@@ -74,6 +75,7 @@ main()
    LEDS_ON(Amber_LED);
    // SD Card Initialization
    error_flag=SD_card_init();
+   printf("Done initalizing SD Card!\r\n");
    if(error_flag!=no_errors)
    {
       LEDS_ON(Red_LED);  // An error causes the program to stop
@@ -91,7 +93,7 @@ main()
    for(i=0;i<512;i++)
    {
       buffer1[i]=0xff;  // erase valout for debug
-//      buf2[i]=0xff;
+      buffer2[i]=0xff;
    }
    SD_stat=Return_SD_Card_Type();
    if(SD_stat==Standard_Capacity)
@@ -118,6 +120,7 @@ main()
 
 	  LEDS_ON(Green_LED);
 	  cluster_num = Read_Dir_Entry(current_directory_sector, block_num, buffer1);
+	  
 	  if((cluster_num &directory_bit)!=0) // directory mask
 	  {
 	  	  printf("Entry is a directory...Opening now...\r\n");
@@ -126,10 +129,9 @@ main()
 	  }
 	  else // if entry is a file
 	  {
-	  	   printf("Entry is a file...Opening now...\r\n");
-	  	   cluster_num &= 0x0FFFFFFF;
-	      //Open_File(cluster_num, buf2); //this needs to be gotten rid of
-		  Play_MP3_file(cluster_num);
+	  	  printf("Entry is a file...\r\nOpening now...\r\n");
+	  	  cluster_num &= 0x0FFFFFFF;
+     	  Play_MP3_file(cluster_num);
 		  
 	  }
    }

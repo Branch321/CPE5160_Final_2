@@ -371,7 +371,7 @@ uint8_t SD_card_init(void)
 	    LEDS_ON(Red_LED); //REDLED=0;  // indicates error has occured.
      }
      //SPI_Select_Set(SD_Card_Select);
-     printf("Timeout = %lu \n\r",timeout);
+     //printf("Timeout = %lu \n\r",timeout);
 	 if(error_flag!=no_errors)
 	 {		
 	    error_status=error_flag;
