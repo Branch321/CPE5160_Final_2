@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V4.02                                                        12/10/2019  19:17:02  PAGE 1
+BL51 BANKED LINKER/LOCATER V4.02                                                        12/10/2019  19:27:39  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V4.02, INVOKED BY:
@@ -59,7 +59,7 @@ INPUT MODULES INCLUDED:
   C:\KEIL\C51\LIB\C51S.LIB (?C?CCASE)
   C:\KEIL\C51\LIB\C51S.LIB (ISDIGIT)
   C:\KEIL\C51\LIB\C51S.LIB (ISSPACE)
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 2
 
 
 
@@ -108,53 +108,53 @@ LINK MAP OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
             CODE    2C87H     0112H     UNIT         ?CO?MAIN
             CODE    2D99H     010BH     UNIT         ?PR?_SEND_COMMAND?SDCARD
             CODE    2EA4H     00FFH     UNIT         ?PR?_READ_BLOCK?SDCARD
-            CODE    2FA3H     00F7H     UNIT         ?CO?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    309AH     00F7H     UNIT         ?PR?_PLAY_MP3_FILE?MP3
-            CODE    3191H     00ECH     UNIT         ?CO?STA013
-            CODE    327DH     00DEH     UNIT         ?PR?_ATOL?ATOL
-            CODE    335BH     00DCH     UNIT         ?PR?STA013_INIT?STA013
-            CODE    3437H     00D9H     UNIT         ?PR?_OPEN_FILE?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    3510H     00D1H     UNIT         ?PR?LONG_SERIAL_INPUT?LONG_SERIAL_IN
-            CODE    35E1H     00B4H     UNIT         ?PR?_RESPONSE?SDCARD
-            CODE    3695H     00ABH     UNIT         ?PR?_FIND_NEXT_CLUS?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    3740H     008DH     UNIT         ?PR?_STA013_CONFIG?STA013
-            CODE    37CDH     008CH     UNIT         ?PR?_SPI_MASTER_INIT?SPI
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 3
+            CODE    2FA3H     00F7H     UNIT         ?PR?_PLAY_MP3_FILE?MP3
+            CODE    309AH     00ECH     UNIT         ?CO?STA013
+            CODE    3186H     00DEH     UNIT         ?PR?_ATOL?ATOL
+            CODE    3264H     00DCH     UNIT         ?PR?STA013_INIT?STA013
+            CODE    3340H     00D1H     UNIT         ?PR?LONG_SERIAL_INPUT?LONG_SERIAL_IN
+            CODE    3411H     00CEH     UNIT         ?CO?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    34DFH     00B4H     UNIT         ?PR?_RESPONSE?SDCARD
+            CODE    3593H     00B3H     UNIT         ?PR?_OPEN_FILE?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    3646H     00ABH     UNIT         ?PR?_FIND_NEXT_CLUS?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    36F1H     008DH     UNIT         ?PR?_STA013_CONFIG?STA013
+            CODE    377EH     008CH     UNIT         ?PR?_SPI_MASTER_INIT?SPI
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 3
 
 
-            CODE    3859H     0085H     UNIT         ?PR?_LCD_PRINT?LCD_ROUTINES
-            CODE    38DEH     0071H     UNIT         ?PR?_FIRST_SECTOR?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    394FH     006EH     UNIT         ?PR?_READ32?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    39BDH     006EH     UNIT         ?PR?_PRINT_ERROR?SDCARD
-            CODE    3A2BH     006AH     UNIT         ?PR?_READ16?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    3A95H     0055H     UNIT         ?PR?_READ_SECTOR?READ_SECTOR
-            CODE    3AEAH     0046H     UNIT         ?PR?_SPI_TRANSFER?SPI
-            CODE    3B30H     0038H     UNIT         ?PR?LCD_INIT?LCD_ROUTINES
-            CODE    3B68H     0035H     UNIT         ?PR?_UART_INIT?UART
-            CODE    3B9DH     0035H     UNIT         ?PR?_SEOS_INIT?SEOS
-            CODE    3BD2H     002AH     UNIT         ?PR?_LCD_WRITE?LCD_HARDWARE_FUNCTIONS
-            CODE    3BFCH     0026H     UNIT         ?PR?_TIMER0_DELAY_1MS?TIMER0_HARDWARE_DELAY_1MS
-            CODE    3C22H     0020H     UNIT         ?PR?_UART_TRANSMIT?UART
-            CODE    3C42H     0020H     UNIT         ?PR?ACK_CHECK?I2C
-            CODE    3C62H     001FH     UNIT         ?PR?_I2C_CLOCK_DELAY?I2C
-            CODE    3C81H     0018H     UNIT         ?PR?_READ8?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    3C99H     0013H     UNIT         ?PR?I2C_CLOCK_START?I2C
-            CODE    3CACH     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
-            CODE    3CBFH     000FH     UNIT         ?PR?_ISDIGIT?ISDIGIT
-            CODE    3CCEH     000DH     UNIT         ?PR?MP3_CLOCK_RESET?MP3
-            CODE    3CDBH     000CH     UNIT         ?C_C51STARTUP
-            CODE    3CE7H     0008H     UNIT         ?PR?UART_RECEIVE?UART
-            CODE    3CEFH     0007H     UNIT         ?PR?EXPORT_DRIVE_VALUES?DIRECTORY_FUNCTIONS_STRUCT
-            CODE    3CF6H     0005H     UNIT         ?PR?_LEDS_ON?LED_CONTROL
-            CODE    3CFBH     0005H     UNIT         ?PR?_P3_CLEAR_BIT?OUTPUTS
-            CODE    3D00H     0005H     UNIT         ?PR?RETURN_SD_CARD_TYPE?SDCARD
-            CODE    3D05H     0005H     UNIT         ?PR?_SPI_SELECT_CLEAR?SPI
-            CODE    3D0AH     0004H     UNIT         ?PR?_LEDS_OFF?LED_CONTROL
-            CODE    3D0EH     0004H     UNIT         ?PR?_P2_SET_BIT?OUTPUTS
-            CODE    3D12H     0004H     UNIT         ?PR?_P3_SET_BIT?OUTPUTS
-            CODE    3D16H     0004H     UNIT         ?PR?_SPI_SELECT_SET?SPI
-            CODE    3D1AH     0004H     UNIT         ?PR?GO_TO_SLEEP?SEOS
-            CODE    3D1EH     0003H     UNIT         ?PR?_P0_OUTPUT_BITS?OUTPUTS
+            CODE    380AH     0085H     UNIT         ?PR?_LCD_PRINT?LCD_ROUTINES
+            CODE    388FH     0071H     UNIT         ?PR?_FIRST_SECTOR?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    3900H     006EH     UNIT         ?PR?_READ32?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    396EH     006EH     UNIT         ?PR?_PRINT_ERROR?SDCARD
+            CODE    39DCH     006AH     UNIT         ?PR?_READ16?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    3A46H     0055H     UNIT         ?PR?_READ_SECTOR?READ_SECTOR
+            CODE    3A9BH     0046H     UNIT         ?PR?_SPI_TRANSFER?SPI
+            CODE    3AE1H     0038H     UNIT         ?PR?LCD_INIT?LCD_ROUTINES
+            CODE    3B19H     0035H     UNIT         ?PR?_UART_INIT?UART
+            CODE    3B4EH     0035H     UNIT         ?PR?_SEOS_INIT?SEOS
+            CODE    3B83H     002AH     UNIT         ?PR?_LCD_WRITE?LCD_HARDWARE_FUNCTIONS
+            CODE    3BADH     0026H     UNIT         ?PR?_TIMER0_DELAY_1MS?TIMER0_HARDWARE_DELAY_1MS
+            CODE    3BD3H     0020H     UNIT         ?PR?_UART_TRANSMIT?UART
+            CODE    3BF3H     0020H     UNIT         ?PR?ACK_CHECK?I2C
+            CODE    3C13H     001FH     UNIT         ?PR?_I2C_CLOCK_DELAY?I2C
+            CODE    3C32H     0018H     UNIT         ?PR?_READ8?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    3C4AH     0013H     UNIT         ?PR?I2C_CLOCK_START?I2C
+            CODE    3C5DH     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
+            CODE    3C70H     000FH     UNIT         ?PR?_ISDIGIT?ISDIGIT
+            CODE    3C7FH     000DH     UNIT         ?PR?MP3_CLOCK_RESET?MP3
+            CODE    3C8CH     000CH     UNIT         ?C_C51STARTUP
+            CODE    3C98H     0008H     UNIT         ?PR?UART_RECEIVE?UART
+            CODE    3CA0H     0007H     UNIT         ?PR?EXPORT_DRIVE_VALUES?DIRECTORY_FUNCTIONS_STRUCT
+            CODE    3CA7H     0005H     UNIT         ?PR?_LEDS_ON?LED_CONTROL
+            CODE    3CACH     0005H     UNIT         ?PR?_P3_CLEAR_BIT?OUTPUTS
+            CODE    3CB1H     0005H     UNIT         ?PR?RETURN_SD_CARD_TYPE?SDCARD
+            CODE    3CB6H     0005H     UNIT         ?PR?_SPI_SELECT_CLEAR?SPI
+            CODE    3CBBH     0004H     UNIT         ?PR?_LEDS_OFF?LED_CONTROL
+            CODE    3CBFH     0004H     UNIT         ?PR?_P2_SET_BIT?OUTPUTS
+            CODE    3CC3H     0004H     UNIT         ?PR?_P3_SET_BIT?OUTPUTS
+            CODE    3CC7H     0004H     UNIT         ?PR?_SPI_SELECT_SET?SPI
+            CODE    3CCBH     0004H     UNIT         ?PR?GO_TO_SLEEP?SEOS
+            CODE    3CCFH     0003H     UNIT         ?PR?_P0_OUTPUT_BITS?OUTPUTS
 
 
 
@@ -179,7 +179,7 @@ SEGMENT                                                       BIT_GROUP         
 >> ----    -----
 
 ?PR?_READ_SECTOR?READ_SECTOR                               -----    -----      0068H    000BH      -----    -----      -
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 4
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 4
 
 
 >> ----    -----
@@ -239,7 +239,7 @@ SEGMENT                                                       BIT_GROUP         
 
 ?PR?PRINTF?PRINTF                                          0020H.0  0001H.1    0068H    0014H      -----    -----      -
 >> ----    -----
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 5
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 5
 
 
   +--> ?PR?PUTCHAR?PUTCHAR
@@ -299,7 +299,7 @@ SEGMENT                                                       BIT_GROUP         
   +--> ?PR?_SPI_SELECT_SET?SPI
   +--> ?CO?SDCARD
   +--> ?PR?PRINTF?PRINTF
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 6
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 6
 
 
   +--> ?PR?_SPI_TRANSFER?SPI
@@ -359,7 +359,7 @@ SEGMENT                                                       BIT_GROUP         
 
 ?PR?_PLAY_MP3_FILE?MP3                                     -----    -----      0043H    0004H      -----    -----      -
 >> ----    -----
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 7
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 7
 
 
   +--> ?PR?EXPORT_DRIVE_VALUES?DIRECTORY_FUNCTIONS_STRUCT
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.1       PUBLIC        TI
   B:00B8H.1       PUBLIC        PT0L
   B:00B8H.3       PUBLIC        PT1L
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 8
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 8
 
 
   B:00B8H.5       PUBLIC        PT2L
@@ -439,7 +439,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.4       PUBLIC        nCS0
   B:0080H.0       PUBLIC        AD0
   D:0088H         PUBLIC        TCON
-  C:3C90H         PUBLIC        _read8
+  C:3C41H         PUBLIC        _read8
   B:0080H.1       PUBLIC        AD1
   B:0080H.2       PUBLIC        AD2
   B:00B0H.1       PUBLIC        per_RxD
@@ -455,7 +455,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.0       PUBLIC        AD8
   B:00A0H.1       PUBLIC        AD9
   B:0088H.1       PUBLIC        IE0
-  C:38DEH         PUBLIC        _First_Sector
+  C:388FH         PUBLIC        _First_Sector
   B:00A0H.7       PUBLIC        AMBERLED
   B:0088H.3       PUBLIC        IE1
   B:00B0H.7       PUBLIC        E
@@ -479,28 +479,28 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.5       PUBLIC        SM2
   C:1E4AH         PUBLIC        _Mount_Drive
   C:218DH         PUBLIC        _Read_Dir_Entry
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 9
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 9
 
 
   B:00D0H.3       PUBLIC        RS0
-  C:3437H         PUBLIC        _Open_File
+  C:3593H         PUBLIC        _Open_File
   B:0088H.4       PUBLIC        TR0
   B:00D0H.4       PUBLIC        RS1
   B:0090H.6       PUBLIC        per_SCLK
   B:0088H.6       PUBLIC        TR1
-  C:3CEFH         PUBLIC        Export_Drive_values
+  C:3CA0H         PUBLIC        Export_Drive_values
   B:00C8H.2       PUBLIC        TR2
   B:00A0H.0       PUBLIC        SW1
   B:00A0H.1       PUBLIC        SW2
   B:00A0H.2       PUBLIC        SW3
-  C:3695H         PUBLIC        _Find_Next_Clus
+  C:3646H         PUBLIC        _Find_Next_Clus
   B:00A0H.3       PUBLIC        SW4
   B:0090H.6       PUBLIC        SCK
   B:0090H.7       PUBLIC        per_MOSI
   B:0090H.5       PUBLIC        per_MISO
-  C:394FH         PUBLIC        _read32
+  C:3900H         PUBLIC        _read32
   B:00C8H.3       PUBLIC        EXEN2
-  C:3A2BH         PUBLIC        _read16
+  C:39DCH         PUBLIC        _read16
   B:0098H.4       PUBLIC        REN
   B:00A0H.2       PUBLIC        AD10
   B:00A0H.3       PUBLIC        AD11
@@ -517,10 +517,10 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          EXPORT_DRIVE_VALUES
-  C:3CEFH         LINE#         27
-  C:3CEFH         LINE#         28
-  C:3CEFH         LINE#         29
-  C:3CF5H         LINE#         30
+  C:3CA0H         LINE#         27
+  C:3CA0H         LINE#         28
+  C:3CA0H         LINE#         29
+  C:3CA6H         LINE#         30
   -------         ENDPROC       EXPORT_DRIVE_VALUES
   -------         PROC          L?0078
   -------         ENDPROC       L?0078
@@ -530,16 +530,16 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         DO            array_name
   D:0007H         SYMBOL        return_value
   -------         ENDDO         return_value
-  C:3C90H         LINE#         32
-  C:3C90H         LINE#         33
-  C:3C90H         LINE#         35
-  C:3C98H         LINE#         36
-  C:3C98H         LINE#         38
+  C:3C41H         LINE#         32
+  C:3C41H         LINE#         33
+  C:3C41H         LINE#         35
+  C:3C49H         LINE#         36
+  C:3C49H         LINE#         38
   -------         ENDPROC       _READ8
   -------         PROC          _READ16
   D:0068H         SYMBOL        offset
   D:006AH         SYMBOL        array_name
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 10
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 10
 
 
   -------         DO            array_name
@@ -547,17 +547,17 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0003H         SYMBOL        temp
   D:0071H         SYMBOL        index
   -------         ENDDO         index
-  C:3A2BH         LINE#         40
-  C:3A35H         LINE#         41
-  C:3A35H         LINE#         44
-  C:3A3EH         LINE#         48
-  C:3A40H         LINE#         49
-  C:3A40H         LINE#         50
-  C:3A60H         LINE#         51
-  C:3A75H         LINE#         52
-  C:3A89H         LINE#         53
-  C:3A90H         LINE#         54
-  C:3A94H         LINE#         55
+  C:39DCH         LINE#         40
+  C:39E6H         LINE#         41
+  C:39E6H         LINE#         44
+  C:39EFH         LINE#         48
+  C:39F1H         LINE#         49
+  C:39F1H         LINE#         50
+  C:3A11H         LINE#         51
+  C:3A26H         LINE#         52
+  C:3A3AH         LINE#         53
+  C:3A41H         LINE#         54
+  C:3A45H         LINE#         55
   -------         ENDPROC       _READ16
   -------         PROC          _READ32
   D:0068H         SYMBOL        offset
@@ -567,17 +567,17 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0003H         SYMBOL        temp
   D:0071H         SYMBOL        index
   -------         ENDDO         index
-  C:394FH         LINE#         57
-  C:3959H         LINE#         58
-  C:3959H         LINE#         61
-  C:3962H         LINE#         65
-  C:3964H         LINE#         66
-  C:3964H         LINE#         67
-  C:3984H         LINE#         68
-  C:3999H         LINE#         69
-  C:39ADH         LINE#         70
-  C:39B4H         LINE#         71
-  C:39BCH         LINE#         72
+  C:3900H         LINE#         57
+  C:390AH         LINE#         58
+  C:390AH         LINE#         61
+  C:3913H         LINE#         65
+  C:3915H         LINE#         66
+  C:3915H         LINE#         67
+  C:3935H         LINE#         68
+  C:394AH         LINE#         69
+  C:395EH         LINE#         70
+  C:3965H         LINE#         71
+  C:396DH         LINE#         72
   -------         ENDPROC       _READ32
   -------         PROC          _PRINT_DIRECTORY
   D:0043H         SYMBOL        Sector_num
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2809H         LINE#         90
   C:2812H         LINE#         91
   C:2817H         LINE#         92
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 11
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 11
 
 
   C:281BH         LINE#         93
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:29C0H         LINE#         150
   C:29C0H         LINE#         151
   C:29C5H         LINE#         152
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 12
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 12
 
 
   C:29C7H         LINE#         153
@@ -719,7 +719,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2227H         LINE#         213
   C:2230H         LINE#         214
   C:2230H         LINE#         215
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 13
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 13
 
 
   C:2238H         LINE#         216
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:004EH         SYMBOL        FATsz16
   D:0050H         SYMBOL        TotalSectors32
   D:0054H         SYMBOL        FATsz32
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 14
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 14
 
 
   D:0058H         SYMBOL        FATSz
@@ -839,7 +839,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:20E2H         LINE#         354
   C:20E4H         LINE#         356
   C:20E4H         LINE#         357
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 15
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 15
 
 
   C:20F2H         LINE#         358
@@ -861,17 +861,17 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         DO            Cluster_num
   D:004BH         SYMBOL        FirstSecCluster
   -------         ENDDO         FirstSecCluster
-  C:38DEH         LINE#         382
-  C:38E6H         LINE#         383
-  C:38E6H         LINE#         385
-  C:38F9H         LINE#         386
-  C:38F9H         LINE#         387
-  C:3906H         LINE#         388
-  C:3908H         LINE#         390
-  C:3908H         LINE#         391
-  C:3946H         LINE#         392
-  C:3946H         LINE#         393
-  C:394EH         LINE#         394
+  C:388FH         LINE#         382
+  C:3897H         LINE#         383
+  C:3897H         LINE#         385
+  C:38AAH         LINE#         386
+  C:38AAH         LINE#         387
+  C:38B7H         LINE#         388
+  C:38B9H         LINE#         390
+  C:38B9H         LINE#         391
+  C:38F7H         LINE#         392
+  C:38F7H         LINE#         393
+  C:38FFH         LINE#         394
   -------         ENDPROC       _FIRST_SECTOR
   -------         PROC          _FIND_NEXT_CLUS
   D:0023H         SYMBOL        Cluster_num
@@ -881,14 +881,14 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0006H         SYMBOL        FAToffset
   D:0004H         SYMBOL        sector
   -------         ENDDO         sector
-  C:3695H         LINE#         396
-  C:369DH         LINE#         397
-  C:369DH         LINE#         400
-  C:36E2H         LINE#         401
-  C:36F7H         LINE#         402
-  C:372FH         LINE#         403
-  C:373FH         LINE#         405
-  C:373FH         LINE#         406
+  C:3646H         LINE#         396
+  C:364EH         LINE#         397
+  C:364EH         LINE#         400
+  C:3693H         LINE#         401
+  C:36A8H         LINE#         402
+  C:36E0H         LINE#         403
+  C:36F0H         LINE#         405
+  C:36F0H         LINE#         406
   -------         ENDPROC       _FIND_NEXT_CLUS
   -------         PROC          _OPEN_FILE
   D:0008H         SYMBOL        Cluster
@@ -898,26 +898,24 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:000FH         SYMBOL        sector_num
   D:0013H         SYMBOL        first_sec_num
   -------         ENDDO         first_sec_num
-  C:3437H         LINE#         408
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 16
+  C:3593H         LINE#         408
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 16
 
 
-  C:343FH         LINE#         409
-  C:343FH         LINE#         410
-  C:3442H         LINE#         413
-  C:3453H         LINE#         415
-  C:3453H         LINE#         416
-  C:3466H         LINE#         417
-  C:3477H         LINE#         418
-  C:3483H         LINE#         419
-  C:34A6H         LINE#         420
-  C:34A6H         LINE#         421
-  C:34C5H         LINE#         422
-  C:34DAH         LINE#         424
-  C:34DCH         LINE#         425
-  C:34F5H         LINE#         426
-  C:350DH         LINE#         427
-  C:350FH         LINE#         428
+  C:359BH         LINE#         409
+  C:359BH         LINE#         410
+  C:359EH         LINE#         415
+  C:359EH         LINE#         416
+  C:35B1H         LINE#         417
+  C:35B9H         LINE#         418
+  C:35DCH         LINE#         419
+  C:35DCH         LINE#         420
+  C:35FBH         LINE#         421
+  C:3610H         LINE#         422
+  C:3612H         LINE#         423
+  C:362BH         LINE#         424
+  C:3643H         LINE#         425
+  C:3645H         LINE#         426
   -------         ENDPROC       _OPEN_FILE
   -------         ENDMOD        DIRECTORY_FUNCTIONS_STRUCT
 
@@ -959,15 +957,15 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.4       PUBLIC        P3_4
   B:00B0H.5       PUBLIC        P3_5
   B:00B0H.6       PUBLIC        nWR
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 17
-
-
   B:00A8H.4       PUBLIC        ES
   B:0098H.0       PUBLIC        RI
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 17
+
+
   B:00D0H.7       PUBLIC        CY
   B:0098H.1       PUBLIC        TI
   B:00B8H.1       PUBLIC        PT0L
-  C:3BD2H         PUBLIC        _LCD_Write
+  C:3B83H         PUBLIC        _LCD_Write
   B:00B8H.3       PUBLIC        PT1L
   B:00B8H.5       PUBLIC        PT2L
   B:0090H.1       PUBLIC        T2EX
@@ -1019,11 +1017,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0088H.2       PUBLIC        IT1
   B:00D0H.0       PUBLIC        P
   B:0098H.7       PUBLIC        SM0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 18
-
-
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 18
+
+
   B:0098H.5       PUBLIC        SM2
   B:00D0H.3       PUBLIC        RS0
   B:0088H.4       PUBLIC        TR0
@@ -1056,20 +1054,20 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         PROC          _LCD_WRITE
   D:0007H         SYMBOL        RegSelect
   D:0049H         SYMBOL        LCD_Data
-  C:3BD2H         LINE#         14
-  C:3BD4H         LINE#         15
-  C:3BD4H         LINE#         16
-  C:3BD7H         LINE#         17
-  C:3BD7H         LINE#         18
-  C:3BDCH         LINE#         19
-  C:3BDEH         LINE#         21
-  C:3BDEH         LINE#         22
-  C:3BE3H         LINE#         23
-  C:3BE3H         LINE#         24
-  C:3BE8H         LINE#         25
-  C:3BEDH         LINE#         26
-  C:3BF2H         LINE#         27
-  C:3BF7H         LINE#         28
+  C:3B83H         LINE#         14
+  C:3B85H         LINE#         15
+  C:3B85H         LINE#         16
+  C:3B88H         LINE#         17
+  C:3B88H         LINE#         18
+  C:3B8DH         LINE#         19
+  C:3B8FH         LINE#         21
+  C:3B8FH         LINE#         22
+  C:3B94H         LINE#         23
+  C:3B94H         LINE#         24
+  C:3B99H         LINE#         25
+  C:3B9EH         LINE#         26
+  C:3BA3H         LINE#         27
+  C:3BA8H         LINE#         28
   -------         ENDPROC       _LCD_WRITE
   -------         ENDMOD        LCD_HARDWARE_FUNCTIONS
 
@@ -1079,11 +1077,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.3       PUBLIC        CCF3
   D:0080H         PUBLIC        P0
   B:00D8H.4       PUBLIC        CCF4
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 19
-
-
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 19
+
+
   D:00B0H         PUBLIC        P3
   B:00B0H.4       PUBLIC        T0
   B:00D0H.6       PUBLIC        AC
@@ -1139,12 +1137,12 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.1       PUBLIC        AD9
   B:0088H.1       PUBLIC        IE0
   B:0088H.3       PUBLIC        IE1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 20
-
-
-  C:3859H         PUBLIC        _LCD_print
+  C:380AH         PUBLIC        _LCD_print
   B:00A8H.1       PUBLIC        ET0
-  C:3B30H         PUBLIC        LCD_Init
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 20
+
+
+  C:3AE1H         PUBLIC        LCD_Init
   B:00A8H.3       PUBLIC        ET1
   B:0088H.5       PUBLIC        TF0
   B:00A8H.5       PUBLIC        ET2
@@ -1183,56 +1181,56 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          LCD_INIT
-  C:3B30H         LINE#         14
-  C:3B30H         LINE#         15
-  C:3B30H         LINE#         16
-  C:3B37H         LINE#         17
-  C:3B3EH         LINE#         18
-  C:3B45H         LINE#         19
-  C:3B4CH         LINE#         20
-  C:3B53H         LINE#         21
-  C:3B5AH         LINE#         22
-  C:3B61H         LINE#         23
+  C:3AE1H         LINE#         14
+  C:3AE1H         LINE#         15
+  C:3AE1H         LINE#         16
+  C:3AE8H         LINE#         17
+  C:3AEFH         LINE#         18
+  C:3AF6H         LINE#         19
+  C:3AFDH         LINE#         20
+  C:3B04H         LINE#         21
+  C:3B0BH         LINE#         22
+  C:3B12H         LINE#         23
   -------         ENDPROC       LCD_INIT
   -------         PROC          _LCD_PRINT
   D:0007H         SYMBOL        address
   D:0043H         SYMBOL        num_bytes
   D:0044H         SYMBOL        array_name_p
   -------         DO            array_name_p
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 21
-
-
   D:0047H         SYMBOL        index
   D:0048H         SYMBOL        character
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 21
+
+
   -------         ENDDO         character
-  C:3859H         LINE#         28
-  C:3861H         LINE#         29
-  C:3861H         LINE#         31
-  C:3865H         LINE#         32
-  C:3865H         LINE#         33
-  C:386EH         LINE#         34
-  C:3875H         LINE#         35
-  C:3875H         LINE#         36
-  C:3879H         LINE#         37
-  C:3879H         LINE#         38
-  C:387BH         LINE#         39
-  C:388BH         LINE#         40
-  C:388FH         LINE#         41
-  C:388FH         LINE#         42
-  C:3895H         LINE#         43
-  C:389CH         LINE#         44
-  C:389EH         LINE#         45
-  C:38AFH         LINE#         46
-  C:38B1H         LINE#         47
-  C:38B1H         LINE#         49
-  C:38B1H         LINE#         50
-  C:38BBH         LINE#         51
-  C:38BBH         LINE#         52
-  C:38CCH         LINE#         53
-  C:38D2H         LINE#         54
-  C:38D9H         LINE#         55
-  C:38DDH         LINE#         56
-  C:38DDH         LINE#         57
+  C:380AH         LINE#         28
+  C:3812H         LINE#         29
+  C:3812H         LINE#         31
+  C:3816H         LINE#         32
+  C:3816H         LINE#         33
+  C:381FH         LINE#         34
+  C:3826H         LINE#         35
+  C:3826H         LINE#         36
+  C:382AH         LINE#         37
+  C:382AH         LINE#         38
+  C:382CH         LINE#         39
+  C:383CH         LINE#         40
+  C:3840H         LINE#         41
+  C:3840H         LINE#         42
+  C:3846H         LINE#         43
+  C:384DH         LINE#         44
+  C:384FH         LINE#         45
+  C:3860H         LINE#         46
+  C:3862H         LINE#         47
+  C:3862H         LINE#         49
+  C:3862H         LINE#         50
+  C:386CH         LINE#         51
+  C:386CH         LINE#         52
+  C:387DH         LINE#         53
+  C:3883H         LINE#         54
+  C:388AH         LINE#         55
+  C:388EH         LINE#         56
+  C:388EH         LINE#         57
   -------         ENDPROC       _LCD_PRINT
   -------         ENDMOD        LCD_ROUTINES
 
@@ -1251,7 +1249,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.7       PUBLIC        nRD
   B:0090H.0       PUBLIC        T2
   B:00A8H.7       PUBLIC        EA
-  C:3CF6H         PUBLIC        _LEDS_ON
+  C:3CA7H         PUBLIC        _LEDS_ON
   B:00A8H.6       PUBLIC        EC
   B:00D8H.7       PUBLIC        CF
   B:00B0H.2       PUBLIC        nINT0
@@ -1259,11 +1257,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.3       PUBLIC        nINT1
   D:00A8H         PUBLIC        IEN0
   B:00B0H.0       PUBLIC        RxD
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 22
-
-
   B:0090H.0       PUBLIC        P1_0
   B:00B0H.1       PUBLIC        TxD
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 22
+
+
   B:0090H.3       PUBLIC        CEX0
   B:0090H.1       PUBLIC        P1_1
   B:0090H.4       PUBLIC        CEX1
@@ -1319,11 +1317,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.7       PUBLIC        AMBERLED
   B:0088H.3       PUBLIC        IE1
   B:00B0H.7       PUBLIC        E
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 23
-
-
-  C:3D0AH         PUBLIC        _LEDS_OFF
+  C:3CBBH         PUBLIC        _LEDS_OFF
   B:00A0H.5       PUBLIC        GREENLED
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 23
+
+
   B:00A8H.1       PUBLIC        ET0
   B:00A8H.3       PUBLIC        ET1
   B:0088H.5       PUBLIC        TF0
@@ -1371,20 +1369,20 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          _LEDS_ON
   D:0007H         SYMBOL        LED_mask
-  C:3CF6H         LINE#         13
-  C:3CF6H         LINE#         14
-  C:3CF6H         LINE#         15
-  C:3CFAH         LINE#         16
+  C:3CA7H         LINE#         13
+  C:3CA7H         LINE#         14
+  C:3CA7H         LINE#         15
+  C:3CABH         LINE#         16
   -------         ENDPROC       _LEDS_ON
   -------         PROC          _LEDS_OFF
   D:0007H         SYMBOL        LED_mask
-  C:3D0AH         LINE#         26
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 24
+  C:3CBBH         LINE#         26
+  C:3CBBH         LINE#         27
+  C:3CBBH         LINE#         28
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 24
 
 
-  C:3D0AH         LINE#         27
-  C:3D0AH         LINE#         28
-  C:3D0DH         LINE#         29
+  C:3CBEH         LINE#         29
   -------         ENDPROC       _LEDS_OFF
   -------         ENDMOD        LED_CONTROL
 
@@ -1431,7 +1429,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D0H.2       PUBLIC        OV
   B:0090H.1       PUBLIC        SS
   B:00B8H.2       PUBLIC        PX1L
-  C:3510H         PUBLIC        long_serial_input
+  C:3340H         PUBLIC        long_serial_input
   B:00C8H.5       PUBLIC        RCLK
   B:00C8H.4       PUBLIC        TCLK
   B:00B8H.6       PUBLIC        PPCL
@@ -1439,11 +1437,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0080H.0       PUBLIC        AD0
   D:0088H         PUBLIC        TCON
   B:0080H.1       PUBLIC        AD1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 25
-
-
   B:0080H.2       PUBLIC        AD2
   B:00C8H.1       PUBLIC        CnT2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 25
+
+
   B:0080H.3       PUBLIC        AD3
   B:0090H.5       PUBLIC        MISO
   B:0090H.7       PUBLIC        MOSI
@@ -1499,52 +1497,52 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0044H         SYMBOL        input
   D:0045H         SYMBOL        input_values
   D:0050H         SYMBOL        output_value
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 26
-
-
   -------         ENDDO         output_value
-  C:3510H         LINE#         16
-  C:3510H         LINE#         17
-  C:3510H         LINE#         20
-  C:3513H         LINE#         21
-  C:3513H         LINE#         22
-  C:351AH         LINE#         23
-  C:3521H         LINE#         24
-  C:352BH         LINE#         25
-  C:352EH         LINE#         27
-  C:352EH         LINE#         28
-  C:3533H         LINE#         29
-  C:3541H         LINE#         30
-  C:3541H         LINE#         31
-  C:3548H         LINE#         32
-  C:354AH         LINE#         33
-  C:354FH         LINE#         34
-  C:3551H         LINE#         35
-  C:355CH         LINE#         36
-  C:355CH         LINE#         37
-  C:355EH         LINE#         38
-  C:3565H         LINE#         39
-  C:356AH         LINE#         40
-  C:356FH         LINE#         41
-  C:3574H         LINE#         42
-  C:3576H         LINE#         43
-  C:3581H         LINE#         44
-  C:3581H         LINE#         45
-  C:3592H         LINE#         46
-  C:3597H         LINE#         47
-  C:359CH         LINE#         48
-  C:359EH         LINE#         50
-  C:359EH         LINE#         51
-  C:35A1H         LINE#         52
-  C:35A1H         LINE#         53
-  C:35A6H         LINE#         54
-  C:35A6H         LINE#         55
-  C:35B7H         LINE#         56
-  C:35BCH         LINE#         57
-  C:35C1H         LINE#         58
-  C:35C1H         LINE#         59
-  C:35D8H         LINE#         61
-  C:35E0H         LINE#         62
+  C:3340H         LINE#         16
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 26
+
+
+  C:3340H         LINE#         17
+  C:3340H         LINE#         20
+  C:3343H         LINE#         21
+  C:3343H         LINE#         22
+  C:334AH         LINE#         23
+  C:3351H         LINE#         24
+  C:335BH         LINE#         25
+  C:335EH         LINE#         27
+  C:335EH         LINE#         28
+  C:3363H         LINE#         29
+  C:3371H         LINE#         30
+  C:3371H         LINE#         31
+  C:3378H         LINE#         32
+  C:337AH         LINE#         33
+  C:337FH         LINE#         34
+  C:3381H         LINE#         35
+  C:338CH         LINE#         36
+  C:338CH         LINE#         37
+  C:338EH         LINE#         38
+  C:3395H         LINE#         39
+  C:339AH         LINE#         40
+  C:339FH         LINE#         41
+  C:33A4H         LINE#         42
+  C:33A6H         LINE#         43
+  C:33B1H         LINE#         44
+  C:33B1H         LINE#         45
+  C:33C2H         LINE#         46
+  C:33C7H         LINE#         47
+  C:33CCH         LINE#         48
+  C:33CEH         LINE#         50
+  C:33CEH         LINE#         51
+  C:33D1H         LINE#         52
+  C:33D1H         LINE#         53
+  C:33D6H         LINE#         54
+  C:33D6H         LINE#         55
+  C:33E7H         LINE#         56
+  C:33ECH         LINE#         57
+  C:33F1H         LINE#         58
+  C:33F1H         LINE#         59
+  C:3408H         LINE#         61
+  C:3410H         LINE#         62
   -------         ENDPROC       LONG_SERIAL_INPUT
   -------         ENDMOD        LONG_SERIAL_IN
 
@@ -1559,16 +1557,16 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:00B0H         PUBLIC        P3
   B:00B0H.4       PUBLIC        T0
   B:00D0H.6       PUBLIC        AC
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 27
-
-
   B:00B0H.5       PUBLIC        T1
   B:00B0H.7       PUBLIC        nRD
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 27
+
+
   B:0090H.0       PUBLIC        T2
   B:00A8H.7       PUBLIC        EA
   B:00A8H.6       PUBLIC        EC
   B:00D8H.7       PUBLIC        CF
-  C:3D1EH         PUBLIC        _P0_output_bits
+  C:3CCFH         PUBLIC        _P0_output_bits
   B:00B0H.2       PUBLIC        nINT0
   B:0098H.7       PUBLIC        FE
   B:00B0H.3       PUBLIC        nINT1
@@ -1607,8 +1605,8 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00C8H.5       PUBLIC        RCLK
   B:00C8H.4       PUBLIC        TCLK
   B:00B8H.6       PUBLIC        PPCL
-  C:3D0EH         PUBLIC        _P2_set_bit
-  C:3D12H         PUBLIC        _P3_set_bit
+  C:3CBFH         PUBLIC        _P2_set_bit
+  C:3CC3H         PUBLIC        _P3_set_bit
   B:00A0H.4       PUBLIC        REDLED
   D:0098H         PUBLIC        SCON
   B:00A0H.6       PUBLIC        YELLOWLED
@@ -1619,11 +1617,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0080H.2       PUBLIC        AD2
   B:00B0H.1       PUBLIC        per_RxD
   B:00C8H.1       PUBLIC        CnT2
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 28
-
-
   B:0080H.3       PUBLIC        AD3
   B:0090H.5       PUBLIC        MISO
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 28
+
+
   B:0090H.7       PUBLIC        MOSI
   B:0080H.4       PUBLIC        AD4
   B:00B0H.0       PUBLIC        per_TxD
@@ -1676,43 +1674,43 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.5       PUBLIC        AD13
   B:00A0H.6       PUBLIC        AD14
   B:00A0H.7       PUBLIC        AD15
-  C:3CFBH         PUBLIC        _P3_clear_bit
+  C:3CACH         PUBLIC        _P3_clear_bit
   B:00B8H.4       PUBLIC        PLS
   B:00D0H.5       PUBLIC        F0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 29
-
-
   B:00D0H.1       PUBLIC        F1
   D:00D0H         PUBLIC        PSW
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 29
+
+
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          _P0_OUTPUT_BITS
   D:0007H         SYMBOL        Port_Data
-  C:3D1EH         LINE#         14
-  C:3D1EH         LINE#         15
-  C:3D1EH         LINE#         16
-  C:3D20H         LINE#         17
+  C:3CCFH         LINE#         14
+  C:3CCFH         LINE#         15
+  C:3CCFH         LINE#         16
+  C:3CD1H         LINE#         17
   -------         ENDPROC       _P0_OUTPUT_BITS
   -------         PROC          _P3_CLEAR_BIT
   D:0007H         SYMBOL        Bit_Data
-  C:3CFBH         LINE#         60
-  C:3CFBH         LINE#         61
-  C:3CFBH         LINE#         62
-  C:3CFFH         LINE#         63
+  C:3CACH         LINE#         60
+  C:3CACH         LINE#         61
+  C:3CACH         LINE#         62
+  C:3CB0H         LINE#         63
   -------         ENDPROC       _P3_CLEAR_BIT
   -------         PROC          _P2_SET_BIT
   D:0007H         SYMBOL        Bit_Data
-  C:3D0EH         LINE#         81
-  C:3D0EH         LINE#         82
-  C:3D0EH         LINE#         83
-  C:3D11H         LINE#         84
+  C:3CBFH         LINE#         81
+  C:3CBFH         LINE#         82
+  C:3CBFH         LINE#         83
+  C:3CC2H         LINE#         84
   -------         ENDPROC       _P2_SET_BIT
   -------         PROC          _P3_SET_BIT
   D:0007H         SYMBOL        Bit_Data
-  C:3D12H         LINE#         86
-  C:3D12H         LINE#         87
-  C:3D12H         LINE#         88
-  C:3D15H         LINE#         89
+  C:3CC3H         LINE#         86
+  C:3CC3H         LINE#         87
+  C:3CC3H         LINE#         88
+  C:3CC6H         LINE#         89
   -------         ENDPROC       _P3_SET_BIT
   -------         ENDMOD        OUTPUTS
 
@@ -1739,11 +1737,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:00A8H         PUBLIC        IEN0
   B:00B0H.0       PUBLIC        RxD
   B:00B0H.1       PUBLIC        TxD
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 30
-
-
   B:0090H.3       PUBLIC        CEX0
   B:0090H.4       PUBLIC        CEX1
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 30
+
+
   B:00C8H.0       PUBLIC        CP
   B:00D8H.6       PUBLIC        CR
   B:00C8H.6       PUBLIC        EXF2
@@ -1799,11 +1797,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
   B:0098H.5       PUBLIC        SM2
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 31
-
-
   B:00D0H.3       PUBLIC        RS0
   B:0088H.4       PUBLIC        TR0
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 31
+
+
   B:00D0H.4       PUBLIC        RS1
   B:0088H.6       PUBLIC        TR1
   B:00C8H.2       PUBLIC        TR2
@@ -1859,11 +1857,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.0       PUBLIC        RI
   B:00D0H.7       PUBLIC        CY
   B:0098H.1       PUBLIC        TI
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 32
-
-
   B:00B8H.1       PUBLIC        PT0L
   B:00B8H.3       PUBLIC        PT1L
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 32
+
+
   B:00B8H.5       PUBLIC        PT2L
   B:0090H.1       PUBLIC        T2EX
   D:00D8H         PUBLIC        CCON
@@ -1874,7 +1872,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00C8H.5       PUBLIC        RCLK
   B:00C8H.4       PUBLIC        TCLK
   B:00B8H.6       PUBLIC        PPCL
-  C:3A95H         PUBLIC        _Read_Sector
+  C:3A46H         PUBLIC        _Read_Sector
   D:0098H         PUBLIC        SCON
   B:0080H.0       PUBLIC        AD0
   D:0088H         PUBLIC        TCON
@@ -1919,11 +1917,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.4       PUBLIC        REN
   B:00A0H.2       PUBLIC        AD10
   B:00A0H.3       PUBLIC        AD11
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 33
-
-
   D:00C8H         PUBLIC        T2CON
   B:00A0H.4       PUBLIC        AD12
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 33
+
+
   B:00A0H.5       PUBLIC        AD13
   B:00A0H.6       PUBLIC        AD14
   B:00A0H.7       PUBLIC        AD15
@@ -1941,23 +1939,23 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0071H         SYMBOL        SDtype
   D:0072H         SYMBOL        error_flag
   -------         ENDDO         error_flag
-  C:3A95H         LINE#         13
-  C:3A9DH         LINE#         14
-  C:3A9DH         LINE#         16
-  C:3AA0H         LINE#         19
-  C:3AA5H         LINE#         21
-  C:3AAAH         LINE#         23
-  C:3AC8H         LINE#         25
-  C:3ACCH         LINE#         26
-  C:3ACCH         LINE#         27
-  C:3ADBH         LINE#         28
-  C:3ADBH         LINE#         30
-  C:3AE0H         LINE#         32
-  C:3AE4H         LINE#         33
-  C:3AE4H         LINE#         34
-  C:3AE7H         LINE#         35
-  C:3AE7H         LINE#         36
-  C:3AE9H         LINE#         37
+  C:3A46H         LINE#         13
+  C:3A4EH         LINE#         14
+  C:3A4EH         LINE#         16
+  C:3A51H         LINE#         19
+  C:3A56H         LINE#         21
+  C:3A5BH         LINE#         23
+  C:3A79H         LINE#         25
+  C:3A7DH         LINE#         26
+  C:3A7DH         LINE#         27
+  C:3A8CH         LINE#         28
+  C:3A8CH         LINE#         30
+  C:3A91H         LINE#         32
+  C:3A95H         LINE#         33
+  C:3A95H         LINE#         34
+  C:3A98H         LINE#         35
+  C:3A98H         LINE#         36
+  C:3A9AH         LINE#         37
   -------         ENDPROC       _READ_SECTOR
   -------         ENDMOD        READ_SECTOR
 
@@ -1979,11 +1977,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A8H.6       PUBLIC        EC
   B:00D8H.7       PUBLIC        CF
   B:00B0H.2       PUBLIC        nINT0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 34
-
-
   B:0098H.7       PUBLIC        FE
   B:00B0H.3       PUBLIC        nINT1
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 34
+
+
   D:00A8H         PUBLIC        IEN0
   B:00B0H.0       PUBLIC        RxD
   B:0090H.0       PUBLIC        P1_0
@@ -2006,7 +2004,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.0       PUBLIC        RI
   B:00D0H.7       PUBLIC        CY
   B:0098H.1       PUBLIC        TI
-  C:39BDH         PUBLIC        _print_error
+  C:396EH         PUBLIC        _print_error
   B:00B8H.1       PUBLIC        PT0L
   B:00B8H.3       PUBLIC        PT1L
   B:00B8H.5       PUBLIC        PT2L
@@ -2039,11 +2037,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0080H.5       PUBLIC        AD5
   B:0080H.6       PUBLIC        AD6
   B:0080H.7       PUBLIC        AD7
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 35
-
-
   B:00A0H.0       PUBLIC        AD8
   B:00A0H.1       PUBLIC        AD9
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 35
+
+
   B:0088H.1       PUBLIC        IE0
   B:00A0H.7       PUBLIC        AMBERLED
   B:0088H.3       PUBLIC        IE1
@@ -2066,7 +2064,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
   B:0098H.5       PUBLIC        SM2
-  C:35E8H         PUBLIC        _response
+  C:34E6H         PUBLIC        _response
   B:00D0H.3       PUBLIC        RS0
   B:0088H.4       PUBLIC        TR0
   B:00D0H.4       PUBLIC        RS1
@@ -2075,7 +2073,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00C8H.2       PUBLIC        TR2
   B:00A0H.0       PUBLIC        SW1
   B:00A0H.1       PUBLIC        SW2
-  C:3D00H         PUBLIC        Return_SD_Card_Type
+  C:3CB1H         PUBLIC        Return_SD_Card_Type
   B:00A0H.2       PUBLIC        SW3
   B:00A0H.3       PUBLIC        SW4
   B:0090H.6       PUBLIC        SCK
@@ -2099,11 +2097,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:00D0H         PUBLIC        PSW
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 36
-
-
   -------         PROC          L?0133
   -------         ENDPROC       L?0133
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 36
+
+
   -------         PROC          _SEND_COMMAND
   D:0073H         SYMBOL        cmnd
   D:0074H         SYMBOL        argum
@@ -2159,11 +2157,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2E79H         LINE#         70
   C:2E7DH         LINE#         71
   C:2E7DH         LINE#         72
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 37
-
-
   C:2E80H         LINE#         73
   C:2E82H         LINE#         74
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 37
+
+
   C:2E87H         LINE#         75
   C:2E87H         LINE#         76
   C:2E8AH         LINE#         77
@@ -2190,45 +2188,45 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:005DH         SYMBOL        SPI_return
   D:005EH         SYMBOL        index
   -------         ENDDO         index
-  C:35E8H         LINE#         99
-  C:35F0H         LINE#         100
-  C:35F0H         LINE#         102
-  C:35F5H         LINE#         104
-  C:35F7H         LINE#         106
-  C:35F7H         LINE#         107
-  C:3604H         LINE#         109
-  C:360CH         LINE#         110
-  C:361BH         LINE#         111
-  C:361FH         LINE#         112
-  C:361FH         LINE#         113
-  C:3622H         LINE#         114
-  C:3624H         LINE#         115
-  C:362AH         LINE#         116
-  C:362AH         LINE#         117
-  C:362DH         LINE#         118
-  C:362FH         LINE#         120
-  C:362FH         LINE#         121
-  C:363AH         LINE#         122
-  C:3642H         LINE#         123
-  C:3642H         LINE#         124
-  C:3649H         LINE#         125
-  C:3649H         LINE#         126
-  C:365AH         LINE#         127
-  C:365AH         LINE#         128
-  C:3667H         LINE#         129
-  C:3678H         LINE#         130
-  C:3682H         LINE#         131
-  C:3682H         LINE#         132
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 38
+  C:34E6H         LINE#         99
+  C:34EEH         LINE#         100
+  C:34EEH         LINE#         102
+  C:34F3H         LINE#         104
+  C:34F5H         LINE#         106
+  C:34F5H         LINE#         107
+  C:3502H         LINE#         109
+  C:350AH         LINE#         110
+  C:3519H         LINE#         111
+  C:351DH         LINE#         112
+  C:351DH         LINE#         113
+  C:3520H         LINE#         114
+  C:3522H         LINE#         115
+  C:3528H         LINE#         116
+  C:3528H         LINE#         117
+  C:352BH         LINE#         118
+  C:352DH         LINE#         120
+  C:352DH         LINE#         121
+  C:3538H         LINE#         122
+  C:3540H         LINE#         123
+  C:3540H         LINE#         124
+  C:3547H         LINE#         125
+  C:3547H         LINE#         126
+  C:3558H         LINE#         127
+  C:3558H         LINE#         128
+  C:3565H         LINE#         129
+  C:3576H         LINE#         130
+  C:3580H         LINE#         131
+  C:3580H         LINE#         132
+  C:3580H         LINE#         134
+  C:3580H         LINE#         135
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 38
 
 
-  C:3682H         LINE#         134
-  C:3682H         LINE#         135
-  C:3685H         LINE#         136
-  C:3685H         LINE#         137
-  C:3685H         LINE#         138
-  C:3692H         LINE#         139
-  C:3694H         LINE#         140
+  C:3583H         LINE#         136
+  C:3583H         LINE#         137
+  C:3583H         LINE#         138
+  C:3590H         LINE#         139
+  C:3592H         LINE#         140
   -------         ENDPROC       _RESPONSE
   -------         PROC          _READ_BLOCK
   D:0073H         SYMBOL        num_bytes
@@ -2279,11 +2277,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2F54H         LINE#         193
   C:2F65H         LINE#         194
   C:2F6FH         LINE#         195
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 39
-
-
   C:2F7CH         LINE#         196
   C:2F89H         LINE#         197
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 39
+
+
   C:2F8BH         LINE#         199
   C:2F8BH         LINE#         200
   C:2F8EH         LINE#         201
@@ -2339,11 +2337,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:10A7H         LINE#         252
   C:10ACH         LINE#         253
   C:10B5H         LINE#         254
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 40
-
-
   C:10BAH         LINE#         255
   C:10CCH         LINE#         256
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 40
+
+
   C:10D3H         LINE#         257
   C:10D3H         LINE#         258
   C:10DFH         LINE#         259
@@ -2399,11 +2397,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:11BCH         LINE#         312
   C:11C5H         LINE#         313
   C:11C8H         LINE#         314
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 41
-
-
   C:11C8H         LINE#         315
   C:11D9H         LINE#         316
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 41
+
+
   C:11E2H         LINE#         317
   C:11E7H         LINE#         318
   C:11ECH         LINE#         319
@@ -2459,11 +2457,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:12FCH         LINE#         377
   C:12FEH         LINE#         378
   C:12FEH         LINE#         379
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 42
-
-
   C:12FEH         LINE#         380
   C:130FH         LINE#         381
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 42
+
+
   C:130FH         LINE#         382
   C:1314H         LINE#         383
   C:131DH         LINE#         384
@@ -2519,35 +2517,35 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:1406H         LINE#         437
   C:140BH         LINE#         438
   C:140BH         LINE#         439
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 43
-
-
   C:140BH         LINE#         440
   C:140FH         LINE#         441
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 43
+
+
   C:140FH         LINE#         442
   C:1413H         LINE#         443
   C:1413H         LINE#         444
   C:1415H         LINE#         445
   -------         ENDPROC       SD_CARD_INIT
   -------         PROC          RETURN_SD_CARD_TYPE
-  C:3D00H         LINE#         453
-  C:3D00H         LINE#         454
-  C:3D00H         LINE#         455
-  C:3D04H         LINE#         456
+  C:3CB1H         LINE#         453
+  C:3CB1H         LINE#         454
+  C:3CB1H         LINE#         455
+  C:3CB5H         LINE#         456
   -------         ENDPROC       RETURN_SD_CARD_TYPE
   -------         PROC          _PRINT_ERROR
   D:0057H         SYMBOL        error
-  C:39BDH         LINE#         465
-  C:39BFH         LINE#         466
-  C:39BFH         LINE#         467
-  C:39CDH         LINE#         468
-  C:39DBH         LINE#         469
-  C:39E9H         LINE#         470
-  C:39F7H         LINE#         471
-  C:3A05H         LINE#         472
-  C:3A13H         LINE#         473
-  C:3A21H         LINE#         474
-  C:3A2AH         LINE#         475
+  C:396EH         LINE#         465
+  C:3970H         LINE#         466
+  C:3970H         LINE#         467
+  C:397EH         LINE#         468
+  C:398CH         LINE#         469
+  C:399AH         LINE#         470
+  C:39A8H         LINE#         471
+  C:39B6H         LINE#         472
+  C:39C4H         LINE#         473
+  C:39D2H         LINE#         474
+  C:39DBH         LINE#         475
   -------         ENDPROC       _PRINT_ERROR
   -------         ENDMOD        SDCARD
 
@@ -2579,13 +2577,13 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.1       PUBLIC        TxD
   B:0090H.3       PUBLIC        CEX0
   B:0090H.1       PUBLIC        P1_1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 44
-
-
   B:0090H.4       PUBLIC        CEX1
   B:0090H.2       PUBLIC        P1_2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 44
+
+
   B:00C8H.0       PUBLIC        CP
-  C:37CDH         PUBLIC        _SPI_Master_Init
+  C:377EH         PUBLIC        _SPI_Master_Init
   B:0090H.3       PUBLIC        P1_3
   B:00B0H.2       PUBLIC        P3_2
   B:00D8H.6       PUBLIC        CR
@@ -2599,7 +2597,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.0       PUBLIC        RI
   B:00D0H.7       PUBLIC        CY
   B:0098H.1       PUBLIC        TI
-  C:3D16H         PUBLIC        _SPI_Select_Set
+  C:3CC7H         PUBLIC        _SPI_Select_Set
   B:00B8H.1       PUBLIC        PT0L
   B:00B8H.3       PUBLIC        PT1L
   B:00B8H.5       PUBLIC        PT2L
@@ -2639,11 +2637,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.7       PUBLIC        E
   B:00A0H.5       PUBLIC        GREENLED
   B:00A8H.1       PUBLIC        ET0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 45
-
-
   B:00A8H.3       PUBLIC        ET1
   B:0088H.5       PUBLIC        TF0
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 45
+
+
   B:00A8H.5       PUBLIC        ET2
   B:0088H.7       PUBLIC        TF1
   B:00C8H.7       PUBLIC        TF2
@@ -2664,7 +2662,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.6       PUBLIC        per_SCLK
   B:0088H.6       PUBLIC        TR1
   B:00C8H.2       PUBLIC        TR2
-  C:3D05H         PUBLIC        _SPI_Select_Clear
+  C:3CB6H         PUBLIC        _SPI_Select_Clear
   B:00A0H.0       PUBLIC        SW1
   B:00A0H.1       PUBLIC        SW2
   B:00A0H.2       PUBLIC        SW3
@@ -2684,7 +2682,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B8H.4       PUBLIC        PLS
   B:00D0H.5       PUBLIC        F0
   B:00D0H.1       PUBLIC        F1
-  C:3AEAH         PUBLIC        _SPI_Transfer
+  C:3A9BH         PUBLIC        _SPI_Transfer
   D:00D0H         PUBLIC        PSW
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
@@ -2695,46 +2693,46 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0007H         SYMBOL        divider
   D:0043H         SYMBOL        return_val
   -------         ENDDO         return_val
-  C:37CDH         LINE#         15
-  C:37CDH         LINE#         16
-  C:37CDH         LINE#         18
-  C:37D0H         LINE#         19
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 46
+  C:377EH         LINE#         15
+  C:377EH         LINE#         16
+  C:377EH         LINE#         18
+  C:3781H         LINE#         19
+  C:3793H         LINE#         20
+  C:3799H         LINE#         21
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 46
 
 
-  C:37E2H         LINE#         20
-  C:37E8H         LINE#         21
-  C:37E8H         LINE#         22
-  C:37EBH         LINE#         23
-  C:37EDH         LINE#         24
-  C:37F9H         LINE#         25
-  C:37F9H         LINE#         26
-  C:37FCH         LINE#         27
-  C:37FEH         LINE#         28
-  C:380AH         LINE#         29
-  C:380AH         LINE#         30
-  C:380DH         LINE#         31
-  C:380FH         LINE#         32
-  C:381BH         LINE#         33
-  C:381BH         LINE#         34
-  C:381EH         LINE#         35
-  C:3820H         LINE#         36
-  C:382CH         LINE#         37
-  C:382CH         LINE#         38
-  C:382FH         LINE#         39
-  C:3831H         LINE#         40
-  C:383DH         LINE#         41
-  C:383DH         LINE#         42
-  C:3840H         LINE#         43
-  C:3842H         LINE#         44
-  C:384EH         LINE#         45
-  C:384EH         LINE#         46
-  C:3851H         LINE#         47
-  C:3853H         LINE#         49
-  C:3853H         LINE#         50
-  C:3856H         LINE#         51
-  C:3856H         LINE#         52
-  C:3858H         LINE#         53
+  C:3799H         LINE#         22
+  C:379CH         LINE#         23
+  C:379EH         LINE#         24
+  C:37AAH         LINE#         25
+  C:37AAH         LINE#         26
+  C:37ADH         LINE#         27
+  C:37AFH         LINE#         28
+  C:37BBH         LINE#         29
+  C:37BBH         LINE#         30
+  C:37BEH         LINE#         31
+  C:37C0H         LINE#         32
+  C:37CCH         LINE#         33
+  C:37CCH         LINE#         34
+  C:37CFH         LINE#         35
+  C:37D1H         LINE#         36
+  C:37DDH         LINE#         37
+  C:37DDH         LINE#         38
+  C:37E0H         LINE#         39
+  C:37E2H         LINE#         40
+  C:37EEH         LINE#         41
+  C:37EEH         LINE#         42
+  C:37F1H         LINE#         43
+  C:37F3H         LINE#         44
+  C:37FFH         LINE#         45
+  C:37FFH         LINE#         46
+  C:3802H         LINE#         47
+  C:3804H         LINE#         49
+  C:3804H         LINE#         50
+  C:3807H         LINE#         51
+  C:3807H         LINE#         52
+  C:3809H         LINE#         53
   -------         ENDPROC       _SPI_MASTER_INIT
   -------         PROC          _SPI_TRANSFER
   D:0007H         SYMBOL        data_input
@@ -2743,49 +2741,49 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:007DH         SYMBOL        test
   D:0004H         SYMBOL        timeout
   -------         ENDDO         timeout
-  C:3AEAH         LINE#         64
-  C:3AEAH         LINE#         65
-  C:3AEAH         LINE#         67
-  C:3AEDH         LINE#         68
-  C:3AEFH         LINE#         70
-  C:3AEFH         LINE#         71
-  C:3AF6H         LINE#         72
-  C:3AFBH         LINE#         73
-  C:3B05H         LINE#         74
-  C:3B09H         LINE#         75
-  C:3B09H         LINE#         76
-  C:3B0FH         LINE#         77
-  C:3B0FH         LINE#         78
-  C:3B14H         LINE#         79
-  C:3B17H         LINE#         80
-  C:3B19H         LINE#         82
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 47
+  C:3A9BH         LINE#         64
+  C:3A9BH         LINE#         65
+  C:3A9BH         LINE#         67
+  C:3A9EH         LINE#         68
+  C:3AA0H         LINE#         70
+  C:3AA0H         LINE#         71
+  C:3AA7H         LINE#         72
+  C:3AACH         LINE#         73
+  C:3AB6H         LINE#         74
+  C:3ABAH         LINE#         75
+  C:3ABAH         LINE#         76
+  C:3AC0H         LINE#         77
+  C:3AC0H         LINE#         78
+  C:3AC5H         LINE#         79
+  C:3AC8H         LINE#         80
+  C:3ACAH         LINE#         82
+  C:3ACAH         LINE#         83
+  C:3ACFH         LINE#         84
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 47
 
 
-  C:3B19H         LINE#         83
-  C:3B1EH         LINE#         84
-  C:3B22H         LINE#         85
-  C:3B22H         LINE#         86
-  C:3B24H         LINE#         88
-  C:3B24H         LINE#         89
-  C:3B29H         LINE#         90
-  C:3B2DH         LINE#         91
-  C:3B2DH         LINE#         92
-  C:3B2FH         LINE#         93
+  C:3AD3H         LINE#         85
+  C:3AD3H         LINE#         86
+  C:3AD5H         LINE#         88
+  C:3AD5H         LINE#         89
+  C:3ADAH         LINE#         90
+  C:3ADEH         LINE#         91
+  C:3ADEH         LINE#         92
+  C:3AE0H         LINE#         93
   -------         ENDPROC       _SPI_TRANSFER
   -------         PROC          _SPI_SELECT_SET
   D:0007H         SYMBOL        Output_Pin
-  C:3D16H         LINE#         103
-  C:3D16H         LINE#         104
-  C:3D16H         LINE#         105
-  C:3D19H         LINE#         106
+  C:3CC7H         LINE#         103
+  C:3CC7H         LINE#         104
+  C:3CC7H         LINE#         105
+  C:3CCAH         LINE#         106
   -------         ENDPROC       _SPI_SELECT_SET
   -------         PROC          _SPI_SELECT_CLEAR
   D:0007H         SYMBOL        Output_Pin
-  C:3D05H         LINE#         109
-  C:3D05H         LINE#         110
-  C:3D05H         LINE#         111
-  C:3D09H         LINE#         112
+  C:3CB6H         LINE#         109
+  C:3CB6H         LINE#         110
+  C:3CB6H         LINE#         111
+  C:3CBAH         LINE#         112
   -------         ENDPROC       _SPI_SELECT_CLEAR
   -------         ENDMOD        SPI
 
@@ -2819,11 +2817,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.2       PUBLIC        P1_2
   B:00C8H.0       PUBLIC        CP
   B:0090H.3       PUBLIC        P1_3
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 48
-
-
   B:00B0H.2       PUBLIC        P3_2
   B:00D8H.6       PUBLIC        CR
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 48
+
+
   B:00B0H.3       PUBLIC        P3_3
   B:00C8H.6       PUBLIC        EXF2
   D:00B8H         PUBLIC        IPL0
@@ -2879,11 +2877,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A8H.5       PUBLIC        ET2
   B:0088H.7       PUBLIC        TF1
   B:00C8H.7       PUBLIC        TF2
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 49
-
-
   B:0098H.2       PUBLIC        RB8
   D:008CH         PUBLIC        TH0
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 49
+
+
   B:00A8H.0       PUBLIC        EX0
   B:0088H.0       PUBLIC        IT0
   B:0098H.3       PUBLIC        TB8
@@ -2900,7 +2898,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D0H.4       PUBLIC        RS1
   B:0090H.6       PUBLIC        per_SCLK
   B:0088H.6       PUBLIC        TR1
-  C:3BFCH         PUBLIC        _Timer0_DELAY_1ms
+  C:3BADH         PUBLIC        _Timer0_DELAY_1ms
   B:00C8H.2       PUBLIC        TR2
   B:00A0H.0       PUBLIC        SW1
   B:00A0H.1       PUBLIC        SW2
@@ -2926,24 +2924,24 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          _TIMER0_DELAY_1MS
   D:0006H         SYMBOL        duration
-  C:3BFCH         LINE#         7
-  C:3BFCH         LINE#         8
-  C:3BFCH         LINE#         10
-  C:3BFFH         LINE#         11
-  C:3C02H         LINE#         14
-  C:3C04H         LINE#         17
-  C:3C04H         LINE#         19
-  C:3C07H         LINE#         20
-  C:3C0AH         LINE#         22
-  C:3C0CH         LINE#         23
-  C:3C0EH         LINE#         25
-  C:3C11H         LINE#         27
-  C:3C13H         LINE#         28
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 50
+  C:3BADH         LINE#         7
+  C:3BADH         LINE#         8
+  C:3BADH         LINE#         10
+  C:3BB0H         LINE#         11
+  C:3BB3H         LINE#         14
+  C:3BB5H         LINE#         17
+  C:3BB5H         LINE#         19
+  C:3BB8H         LINE#         20
+  C:3BBBH         LINE#         22
+  C:3BBDH         LINE#         23
+  C:3BBFH         LINE#         25
+  C:3BC2H         LINE#         27
+  C:3BC4H         LINE#         28
+  C:3BC9H         LINE#         29
+  C:3BD2H         LINE#         30
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 50
 
 
-  C:3C18H         LINE#         29
-  C:3C21H         LINE#         30
   -------         ENDPROC       _TIMER0_DELAY_1MS
   -------         ENDMOD        TIMER0_HARDWARE_DELAY_1MS
 
@@ -2996,14 +2994,14 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0099H         PUBLIC        SBUF
   D:0087H         PUBLIC        PCON
   D:0098H         PUBLIC        SCON
-  C:3B68H         PUBLIC        _uart_init
+  C:3B19H         PUBLIC        _uart_init
   B:0080H.0       PUBLIC        AD0
   D:0088H         PUBLIC        TCON
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 51
-
-
   B:0080H.1       PUBLIC        AD1
   B:0080H.2       PUBLIC        AD2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 51
+
+
   B:00C8H.1       PUBLIC        CnT2
   B:0080H.3       PUBLIC        AD3
   B:0090H.5       PUBLIC        MISO
@@ -3034,7 +3032,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
   B:0098H.5       PUBLIC        SM2
-  C:3C22H         PUBLIC        _UART_Transmit
+  C:3BD3H         PUBLIC        _UART_Transmit
   B:00D0H.3       PUBLIC        RS0
   B:0088H.4       PUBLIC        TR0
   B:00D0H.4       PUBLIC        RS1
@@ -3043,7 +3041,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:009AH         PUBLIC        BRL
   B:0090H.6       PUBLIC        SCK
   B:00C8H.3       PUBLIC        EXEN2
-  C:3CE7H         PUBLIC        UART_Receive
+  C:3C98H         PUBLIC        UART_Receive
   B:0098H.4       PUBLIC        REN
   B:00A0H.2       PUBLIC        AD10
   B:00A0H.3       PUBLIC        AD11
@@ -3059,21 +3057,21 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          _UART_INIT
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 52
-
-
   D:0006H         SYMBOL        BAUD_RATE
-  C:3B68H         LINE#         13
-  C:3B68H         LINE#         14
-  C:3B68H         LINE#         18
-  C:3B6BH         LINE#         19
-  C:3B6EH         LINE#         22
-  C:3B70H         LINE#         24
-  C:3B73H         LINE#         27
-  C:3B76H         LINE#         29
-  C:3B97H         LINE#         30
-  C:3B9AH         LINE#         35
-  C:3B9CH         LINE#         38
+  C:3B19H         LINE#         13
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 52
+
+
+  C:3B19H         LINE#         14
+  C:3B19H         LINE#         18
+  C:3B1CH         LINE#         19
+  C:3B1FH         LINE#         22
+  C:3B21H         LINE#         24
+  C:3B24H         LINE#         27
+  C:3B27H         LINE#         29
+  C:3B48H         LINE#         30
+  C:3B4BH         LINE#         35
+  C:3B4DH         LINE#         38
   -------         ENDPROC       _UART_INIT
   -------         PROC          _UART_TRANSMIT
   D:0007H         SYMBOL        send_value
@@ -3081,35 +3079,35 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0006H         SYMBOL        return_value
   D:0004H         SYMBOL        timeout
   -------         ENDDO         timeout
-  C:3C22H         LINE#         48
-  C:3C22H         LINE#         49
-  C:3C22H         LINE#         52
-  C:3C25H         LINE#         54
-  C:3C25H         LINE#         55
-  C:3C2AH         LINE#         56
-  C:3C31H         LINE#         57
-  C:3C35H         LINE#         58
-  C:3C35H         LINE#         59
-  C:3C37H         LINE#         60
-  C:3C39H         LINE#         61
-  C:3C3BH         LINE#         62
-  C:3C3DH         LINE#         64
-  C:3C3DH         LINE#         65
-  C:3C3FH         LINE#         66
-  C:3C3FH         LINE#         67
-  C:3C41H         LINE#         68
+  C:3BD3H         LINE#         48
+  C:3BD3H         LINE#         49
+  C:3BD3H         LINE#         52
+  C:3BD6H         LINE#         54
+  C:3BD6H         LINE#         55
+  C:3BDBH         LINE#         56
+  C:3BE2H         LINE#         57
+  C:3BE6H         LINE#         58
+  C:3BE6H         LINE#         59
+  C:3BE8H         LINE#         60
+  C:3BEAH         LINE#         61
+  C:3BECH         LINE#         62
+  C:3BEEH         LINE#         64
+  C:3BEEH         LINE#         65
+  C:3BF0H         LINE#         66
+  C:3BF0H         LINE#         67
+  C:3BF2H         LINE#         68
   -------         ENDPROC       _UART_TRANSMIT
   -------         PROC          UART_RECEIVE
   -------         DO            UART_RECEIVE
   D:0007H         SYMBOL        return_value
   -------         ENDDO         return_value
-  C:3CE7H         LINE#         83
-  C:3CE7H         LINE#         84
-  C:3CE7H         LINE#         86
-  C:3CEAH         LINE#         87
-  C:3CECH         LINE#         88
-  C:3CEEH         LINE#         89
-  C:3CEEH         LINE#         90
+  C:3C98H         LINE#         83
+  C:3C98H         LINE#         84
+  C:3C98H         LINE#         86
+  C:3C9BH         LINE#         87
+  C:3C9DH         LINE#         88
+  C:3C9FH         LINE#         89
+  C:3C9FH         LINE#         90
   -------         ENDPROC       UART_RECEIVE
   -------         ENDMOD        UART
 
@@ -3119,11 +3117,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.3       PUBLIC        CCF3
   D:0080H         PUBLIC        P0
   B:00D8H.4       PUBLIC        CCF4
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 53
-
-
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 53
+
+
   D:00B0H         PUBLIC        P3
   B:00B0H.4       PUBLIC        T0
   B:00D0H.6       PUBLIC        AC
@@ -3153,7 +3151,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:00B8H         PUBLIC        IPL0
   B:00B0H.4       PUBLIC        P3_4
   B:00B0H.5       PUBLIC        P3_5
-  C:3D1AH         PUBLIC        go_to_sleep
+  C:3CCBH         PUBLIC        go_to_sleep
   B:00B0H.6       PUBLIC        nWR
   B:00A8H.4       PUBLIC        ES
   B:0098H.0       PUBLIC        RI
@@ -3179,11 +3177,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0098H         PUBLIC        SCON
   B:00A0H.6       PUBLIC        YELLOWLED
   B:0090H.4       PUBLIC        nCS0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 54
-
-
   B:0080H.0       PUBLIC        AD0
   D:0088H         PUBLIC        TCON
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 54
+
+
   B:0080H.1       PUBLIC        AD1
   B:0080H.2       PUBLIC        AD2
   B:00B0H.1       PUBLIC        per_RxD
@@ -3220,7 +3218,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.7       PUBLIC        SM0
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
-  C:3B9DH         PUBLIC        _sEOS_init
+  C:3B4EH         PUBLIC        _sEOS_init
   B:0098H.5       PUBLIC        SM2
   D:00CCH         PUBLIC        TL2
   B:00D0H.3       PUBLIC        RS0
@@ -3239,11 +3237,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00C8H.3       PUBLIC        EXEN2
   B:0098H.4       PUBLIC        REN
   B:00A0H.2       PUBLIC        AD10
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 55
-
-
   B:00A0H.3       PUBLIC        AD11
   D:00C8H         PUBLIC        T2CON
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 55
+
+
   B:00A0H.4       PUBLIC        AD12
   B:00A0H.5       PUBLIC        AD13
   B:00A0H.6       PUBLIC        AD14
@@ -3261,25 +3259,25 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0007H         SYMBOL        reload_8H
   D:0006H         SYMBOL        reload_8L
   -------         ENDDO         reload_8L
-  C:3B9DH         LINE#         11
-  C:3B9DH         LINE#         16
-  C:3BA0H         LINE#         18
-  C:3BBFH         LINE#         21
-  C:3BBFH         LINE#         22
-  C:3BC1H         LINE#         25
-  C:3BC3H         LINE#         26
-  C:3BC5H         LINE#         29
-  C:3BC7H         LINE#         30
-  C:3BC9H         LINE#         32
-  C:3BCBH         LINE#         33
-  C:3BCDH         LINE#         34
-  C:3BCFH         LINE#         35
-  C:3BD1H         LINE#         36
+  C:3B4EH         LINE#         11
+  C:3B4EH         LINE#         16
+  C:3B51H         LINE#         18
+  C:3B70H         LINE#         21
+  C:3B70H         LINE#         22
+  C:3B72H         LINE#         25
+  C:3B74H         LINE#         26
+  C:3B76H         LINE#         29
+  C:3B78H         LINE#         30
+  C:3B7AH         LINE#         32
+  C:3B7CH         LINE#         33
+  C:3B7EH         LINE#         34
+  C:3B80H         LINE#         35
+  C:3B82H         LINE#         36
   -------         ENDPROC       _SEOS_INIT
   -------         PROC          GO_TO_SLEEP
-  C:3D1AH         LINE#         38
-  C:3D1AH         LINE#         39
-  C:3D1DH         LINE#         40
+  C:3CCBH         LINE#         38
+  C:3CCBH         LINE#         39
+  C:3CCEH         LINE#         40
   -------         ENDPROC       GO_TO_SLEEP
   -------         ENDMOD        SEOS
 
@@ -3288,7 +3286,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.2       PUBLIC        CCF2
   B:00D8H.3       PUBLIC        CCF3
   D:0080H         PUBLIC        P0
-  C:3C6BH         PUBLIC        _I2C_clock_delay
+  C:3C1CH         PUBLIC        _I2C_clock_delay
   B:00D8H.4       PUBLIC        CCF4
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
@@ -3299,11 +3297,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.7       PUBLIC        nRD
   B:0090H.0       PUBLIC        T2
   B:00A8H.7       PUBLIC        EA
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 56
-
-
   B:00A8H.6       PUBLIC        EC
   B:00D8H.7       PUBLIC        CF
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 56
+
+
   B:00B0H.2       PUBLIC        nINT0
   B:0098H.7       PUBLIC        FE
   B:00B0H.3       PUBLIC        nINT1
@@ -3353,17 +3351,17 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.1       PUBLIC        AD9
   B:0088H.1       PUBLIC        IE0
   B:0088H.3       PUBLIC        IE1
-  C:3C99H         PUBLIC        I2C_clock_start
+  C:3C4AH         PUBLIC        I2C_clock_start
   B:00A8H.1       PUBLIC        ET0
   B:00A8H.3       PUBLIC        ET1
   B:0088H.5       PUBLIC        TF0
   B:00A8H.5       PUBLIC        ET2
   B:0088H.7       PUBLIC        TF1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 57
-
-
   B:00C8H.7       PUBLIC        TF2
   B:0098H.2       PUBLIC        RB8
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 57
+
+
   B:00A8H.0       PUBLIC        EX0
   B:0088H.0       PUBLIC        IT0
   D:008DH         PUBLIC        TH1
@@ -3372,7 +3370,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0088H.2       PUBLIC        IT1
   B:00D0H.0       PUBLIC        P
   B:0098H.7       PUBLIC        SM0
-  C:3C42H         PUBLIC        Ack_Check
+  C:3BF3H         PUBLIC        Ack_Check
   B:0090H.2       PUBLIC        ECI
   B:0098H.6       PUBLIC        SM1
   D:008BH         PUBLIC        TL1
@@ -3404,26 +3402,26 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         DO            ACK_CHECK
   B:0020H.4       SYMBOL        response_bit
   -------         ENDDO         response_bit
-  C:3C42H         LINE#         13
-  C:3C42H         LINE#         14
-  C:3C42H         LINE#         18
-  C:3C47H         LINE#         19
-  C:3C49H         LINE#         20
-  C:3C4BH         LINE#         21
-  C:3C50H         LINE#         22
-  C:3C52H         LINE#         23
-  C:3C55H         LINE#         24
-  C:3C59H         LINE#         26
-  C:3C5CH         LINE#         27
-  C:3C5CH         LINE#         29
-  C:3C5FH         LINE#         30
-  C:3C5FH         LINE#         32
-  C:3C5FH         LINE#         34
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 58
+  C:3BF3H         LINE#         13
+  C:3BF3H         LINE#         14
+  C:3BF3H         LINE#         18
+  C:3BF8H         LINE#         19
+  C:3BFAH         LINE#         20
+  C:3BFCH         LINE#         21
+  C:3C01H         LINE#         22
+  C:3C03H         LINE#         23
+  C:3C06H         LINE#         24
+  C:3C0AH         LINE#         26
+  C:3C0DH         LINE#         27
+  C:3C0DH         LINE#         29
+  C:3C10H         LINE#         30
+  C:3C10H         LINE#         32
+  C:3C10H         LINE#         34
+  C:3C12H         LINE#         35
+  C:3C12H         LINE#         36
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 58
 
 
-  C:3C61H         LINE#         35
-  C:3C61H         LINE#         36
   -------         ENDPROC       ACK_CHECK
   -------         PROC          _I2C_READ
   D:0056H         SYMBOL        device_addr
@@ -3479,11 +3477,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2BDEH         LINE#         88
   C:2BDEH         LINE#         89
   C:2BE8H         LINE#         91
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 59
-
-
   C:2BEEH         LINE#         92
   C:2BEEH         LINE#         93
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 59
+
+
   C:2BF1H         LINE#         94
   C:2BF1H         LINE#         98
   C:2BFDH         LINE#         99
@@ -3536,36 +3534,36 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         ENDPROC       L?0081
   -------         PROC          _I2C_CLOCK_DELAY
   D:0007H         SYMBOL        control
-  C:3C6BH         LINE#         151
-  C:3C6BH         LINE#         152
-  C:3C6BH         LINE#         153
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 60
+  C:3C1CH         LINE#         151
+  C:3C1CH         LINE#         152
+  C:3C1CH         LINE#         153
+  C:3C1FH         LINE#         154
+  C:3C1FH         LINE#         155
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 60
 
 
-  C:3C6EH         LINE#         154
-  C:3C6EH         LINE#         155
-  C:3C71H         LINE#         156
-  C:3C71H         LINE#         157
-  C:3C73H         LINE#         158
-  C:3C76H         LINE#         159
-  C:3C76H         LINE#         160
-  C:3C79H         LINE#         161
-  C:3C7CH         LINE#         162
-  C:3C7EH         LINE#         163
-  C:3C80H         LINE#         164
-  C:3C80H         LINE#         165
+  C:3C22H         LINE#         156
+  C:3C22H         LINE#         157
+  C:3C24H         LINE#         158
+  C:3C27H         LINE#         159
+  C:3C27H         LINE#         160
+  C:3C2AH         LINE#         161
+  C:3C2DH         LINE#         162
+  C:3C2FH         LINE#         163
+  C:3C31H         LINE#         164
+  C:3C31H         LINE#         165
   -------         ENDPROC       _I2C_CLOCK_DELAY
   -------         PROC          I2C_CLOCK_START
-  C:3C99H         LINE#         168
-  C:3C99H         LINE#         169
-  C:3C99H         LINE#         170
-  C:3C9CH         LINE#         171
-  C:3C9FH         LINE#         173
-  C:3CA1H         LINE#         175
-  C:3CA4H         LINE#         176
-  C:3CA7H         LINE#         177
-  C:3CA9H         LINE#         178
-  C:3CABH         LINE#         179
+  C:3C4AH         LINE#         168
+  C:3C4AH         LINE#         169
+  C:3C4AH         LINE#         170
+  C:3C4DH         LINE#         171
+  C:3C50H         LINE#         173
+  C:3C52H         LINE#         175
+  C:3C55H         LINE#         176
+  C:3C58H         LINE#         177
+  C:3C5AH         LINE#         178
+  C:3C5CH         LINE#         179
   -------         ENDPROC       I2C_CLOCK_START
   -------         PROC          _I2C_WRITE
   D:0007H         SYMBOL        device_addr
@@ -3599,11 +3597,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2A13H         LINE#         198
   C:2A19H         LINE#         201
   C:2A1BH         LINE#         202
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 61
-
-
   C:2A1EH         LINE#         203
   C:2A21H         LINE#         208
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 61
+
+
   C:2A21H         LINE#         209
   C:2A26H         LINE#         210
   C:2A28H         LINE#         211
@@ -3659,11 +3657,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2AF4H         LINE#         276
   C:2AF7H         LINE#         277
   C:2AF9H         LINE#         278
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 62
-
-
   C:2AFCH         LINE#         281
   C:2B00H         LINE#         282
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 62
+
+
   C:2B08H         LINE#         283
   C:2B08H         LINE#         284
   C:2B0CH         LINE#         285
@@ -3718,12 +3716,12 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.3       PUBLIC        CEX0
   B:0090H.4       PUBLIC        CEX1
   B:00C8H.0       PUBLIC        CP
-  C:335BH         PUBLIC        STA013_init
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 63
-
-
+  C:3264H         PUBLIC        STA013_init
   B:00D8H.6       PUBLIC        CR
   B:00C8H.6       PUBLIC        EXF2
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 63
+
+
   D:00B8H         PUBLIC        IPL0
   B:00B0H.6       PUBLIC        nWR
   B:00A8H.4       PUBLIC        ES
@@ -3747,7 +3745,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0088H         PUBLIC        TCON
   B:0080H.1       PUBLIC        AD1
   B:0080H.2       PUBLIC        AD2
-  C:3740H         PUBLIC        _STA013_config
+  C:36F1H         PUBLIC        _STA013_config
   B:00C8H.1       PUBLIC        CnT2
   B:0080H.3       PUBLIC        AD3
   B:0090H.5       PUBLIC        MISO
@@ -3779,11 +3777,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0098H.5       PUBLIC        SM2
   B:00D0H.3       PUBLIC        RS0
   B:0088H.4       PUBLIC        TR0
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 64
-
-
   B:00D0H.4       PUBLIC        RS1
   B:0088H.6       PUBLIC        TR1
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 64
+
+
   B:00C8H.2       PUBLIC        TR2
   B:0090H.6       PUBLIC        SCK
   B:00C8H.3       PUBLIC        EXEN2
@@ -3808,42 +3806,42 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0045H         SYMBOL        send_array
   D:0048H         SYMBOL        recv_array
   -------         ENDDO         recv_array
-  C:335BH         LINE#         15
-  C:335BH         LINE#         16
-  C:335BH         LINE#         18
-  C:335EH         LINE#         23
-  C:335EH         LINE#         24
-  C:337AH         LINE#         25
-  C:3397H         LINE#         26
-  C:3399H         LINE#         27
-  C:33A1H         LINE#         28
-  C:33ADH         LINE#         30
-  C:33B6H         LINE#         31
-  C:33C3H         LINE#         32
-  C:33C7H         LINE#         33
-  C:33C7H         LINE#         34
-  C:33D0H         LINE#         35
-  C:33D0H         LINE#         36
-  C:33D7H         LINE#         37
-  C:33E0H         LINE#         38
-  C:33EDH         LINE#         39
-  C:33F1H         LINE#         40
-  C:33F1H         LINE#         41
-  C:33FAH         LINE#         42
-  C:33FAH         LINE#         43
-  C:3401H         LINE#         44
-  C:340AH         LINE#         45
-  C:3417H         LINE#         46
-  C:341BH         LINE#         47
-  C:341BH         LINE#         48
-  C:3424H         LINE#         49
-  C:3424H         LINE#         50
-  C:342BH         LINE#         51
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 65
+  C:3264H         LINE#         15
+  C:3264H         LINE#         16
+  C:3264H         LINE#         18
+  C:3267H         LINE#         23
+  C:3267H         LINE#         24
+  C:3283H         LINE#         25
+  C:32A0H         LINE#         26
+  C:32A2H         LINE#         27
+  C:32AAH         LINE#         28
+  C:32B6H         LINE#         30
+  C:32BFH         LINE#         31
+  C:32CCH         LINE#         32
+  C:32D0H         LINE#         33
+  C:32D0H         LINE#         34
+  C:32D9H         LINE#         35
+  C:32D9H         LINE#         36
+  C:32E0H         LINE#         37
+  C:32E9H         LINE#         38
+  C:32F6H         LINE#         39
+  C:32FAH         LINE#         40
+  C:32FAH         LINE#         41
+  C:3303H         LINE#         42
+  C:3303H         LINE#         43
+  C:330AH         LINE#         44
+  C:3313H         LINE#         45
+  C:3320H         LINE#         46
+  C:3324H         LINE#         47
+  C:3324H         LINE#         48
+  C:332DH         LINE#         49
+  C:332DH         LINE#         50
+  C:3334H         LINE#         51
+  C:333DH         LINE#         52
+  C:333FH         LINE#         53
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 65
 
 
-  C:3434H         LINE#         52
-  C:3436H         LINE#         53
   -------         ENDPROC       STA013_INIT
   -------         PROC          _STA013_CONFIG
   D:004BH         SYMBOL        device_addr
@@ -3856,23 +3854,23 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:0053H         SYMBOL        status
   D:0054H         SYMBOL        index
   -------         ENDDO         index
-  C:3740H         LINE#         56
-  C:3748H         LINE#         57
-  C:3748H         LINE#         63
-  C:374DH         LINE#         66
-  C:374DH         LINE#         67
-  C:3750H         LINE#         68
-  C:3761H         LINE#         69
-  C:3769H         LINE#         70
-  C:3773H         LINE#         71
-  C:377BH         LINE#         73
-  C:377BH         LINE#         74
-  C:379AH         LINE#         75
-  C:379CH         LINE#         76
-  C:37A4H         LINE#         77
-  C:37C1H         LINE#         78
-  C:37CAH         LINE#         79
-  C:37CCH         LINE#         80
+  C:36F1H         LINE#         56
+  C:36F9H         LINE#         57
+  C:36F9H         LINE#         63
+  C:36FEH         LINE#         66
+  C:36FEH         LINE#         67
+  C:3701H         LINE#         68
+  C:3712H         LINE#         69
+  C:371AH         LINE#         70
+  C:3724H         LINE#         71
+  C:372CH         LINE#         73
+  C:372CH         LINE#         74
+  C:374BH         LINE#         75
+  C:374DH         LINE#         76
+  C:3755H         LINE#         77
+  C:3772H         LINE#         78
+  C:377BH         LINE#         79
+  C:377DH         LINE#         80
   -------         ENDPROC       _STA013_CONFIG
   -------         ENDMOD        STA013
 
@@ -3899,11 +3897,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.5       PUBLIC        T1
   B:00B0H.7       PUBLIC        nRD
   B:0090H.0       PUBLIC        T2
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 66
-
-
   B:00A8H.7       PUBLIC        EA
   B:00A8H.6       PUBLIC        EC
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 66
+
+
   I:00B8H         PUBLIC        play_status_g
   B:00D8H.7       PUBLIC        CF
   B:00B0H.2       PUBLIC        nINT0
@@ -3943,7 +3941,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D0H.2       PUBLIC        OV
   B:0090H.1       PUBLIC        SS
   B:00B8H.2       PUBLIC        PX1L
-  C:309AH         PUBLIC        _Play_MP3_file
+  C:2FA3H         PUBLIC        _Play_MP3_file
   B:00C8H.5       PUBLIC        RCLK
   B:00C8H.4       PUBLIC        TCLK
   B:00B8H.6       PUBLIC        PPCL
@@ -3959,11 +3957,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00B0H.1       PUBLIC        per_RxD
   B:00C8H.1       PUBLIC        CnT2
   B:0080H.3       PUBLIC        AD3
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 67
-
-
   B:0090H.5       PUBLIC        MISO
   B:0090H.7       PUBLIC        MOSI
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 67
+
+
   B:0080H.4       PUBLIC        AD4
   B:00B0H.0       PUBLIC        per_TxD
   B:0080H.5       PUBLIC        AD5
@@ -3975,7 +3973,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.7       PUBLIC        AMBERLED
   B:0088H.3       PUBLIC        IE1
   B:00B0H.7       PUBLIC        E
-  C:3CCEH         PUBLIC        MP3_clock_reset
+  C:3C7FH         PUBLIC        MP3_clock_reset
   B:00A0H.5       PUBLIC        GREENLED
   B:00A8H.1       PUBLIC        ET0
   B:00A8H.3       PUBLIC        ET1
@@ -4019,11 +4017,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00A0H.2       PUBLIC        AD10
   B:00A0H.3       PUBLIC        AD11
   D:00C8H         PUBLIC        T2CON
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 68
-
-
   B:00A0H.4       PUBLIC        AD12
   B:00A0H.5       PUBLIC        AD13
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 68
+
+
   B:00A0H.6       PUBLIC        AD14
   B:00A0H.7       PUBLIC        AD15
   B:00B8H.4       PUBLIC        PLS
@@ -4034,44 +4032,44 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
   -------         PROC          MP3_CLOCK_RESET
-  C:3CCEH         LINE#         45
-  C:3CCEH         LINE#         46
-  C:3CCEH         LINE#         47
-  C:3CD0H         LINE#         50
-  C:3CD3H         LINE#         51
-  C:3CD6H         LINE#         53
-  C:3CD8H         LINE#         54
-  C:3CDAH         LINE#         55
+  C:3C7FH         LINE#         45
+  C:3C7FH         LINE#         46
+  C:3C7FH         LINE#         47
+  C:3C81H         LINE#         50
+  C:3C84H         LINE#         51
+  C:3C87H         LINE#         53
+  C:3C89H         LINE#         54
+  C:3C8BH         LINE#         55
   -------         ENDPROC       MP3_CLOCK_RESET
   -------         PROC          _PLAY_MP3_FILE
   D:0043H         SYMBOL        begin_cluster
-  C:309AH         LINE#         57
-  C:30A2H         LINE#         58
-  C:30A2H         LINE#         60
-  C:30ABH         LINE#         61
-  C:30B8H         LINE#         62
-  C:30C8H         LINE#         63
-  C:30D1H         LINE#         67
-  C:3104H         LINE#         69
-  C:311BH         LINE#         70
-  C:3124H         LINE#         71
-  C:3157H         LINE#         73
-  C:316EH         LINE#         74
-  C:3177H         LINE#         76
-  C:317BH         LINE#         77
-  C:317EH         LINE#         78
-  C:3183H         LINE#         79
-  C:3183H         LINE#         80
-  C:3183H         LINE#         81
-  C:3188H         LINE#         82
-  C:3188H         LINE#         83
-  C:318AH         LINE#         84
-  C:318BH         LINE#         85
-  C:318BH         LINE#         87
-  C:318BH         LINE#         88
-  C:318EH         LINE#         89
-  C:318EH         LINE#         90
-  C:3190H         LINE#         91
+  C:2FA3H         LINE#         57
+  C:2FABH         LINE#         58
+  C:2FABH         LINE#         60
+  C:2FB4H         LINE#         61
+  C:2FC1H         LINE#         62
+  C:2FD1H         LINE#         63
+  C:2FDAH         LINE#         67
+  C:300DH         LINE#         69
+  C:3024H         LINE#         70
+  C:302DH         LINE#         71
+  C:3060H         LINE#         73
+  C:3077H         LINE#         74
+  C:3080H         LINE#         76
+  C:3084H         LINE#         77
+  C:3087H         LINE#         78
+  C:308CH         LINE#         79
+  C:308CH         LINE#         80
+  C:308CH         LINE#         81
+  C:3091H         LINE#         82
+  C:3091H         LINE#         83
+  C:3093H         LINE#         84
+  C:3094H         LINE#         85
+  C:3094H         LINE#         87
+  C:3094H         LINE#         88
+  C:3097H         LINE#         89
+  C:3097H         LINE#         90
+  C:3099H         LINE#         91
   -------         ENDPROC       _PLAY_MP3_FILE
   -------         PROC          MP3_PLAYER_ISR
   -------         DO            MP3_PLAYER_ISR
@@ -4079,11 +4077,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         ENDDO         temp8
   C:1416H         LINE#         93
   C:1433H         LINE#         96
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 69
-
-
   C:1435H         LINE#         97
   C:1438H         LINE#         98
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 69
+
+
   C:1462H         LINE#         99
   C:1462H         LINE#         100
   C:1462H         LINE#         101
@@ -4139,11 +4137,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:1551H         LINE#         155
   C:1555H         LINE#         156
   C:1555H         LINE#         157
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 70
-
-
   C:1555H         LINE#         162
   C:1555H         LINE#         163
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 70
+
+
   C:1558H         LINE#         164
   C:1558H         LINE#         165
   C:1558H         LINE#         166
@@ -4199,11 +4197,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:1690H         LINE#         224
   C:16C3H         LINE#         225
   C:16DAH         LINE#         226
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 71
-
-
   C:16E3H         LINE#         227
   C:16E7H         LINE#         228
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 71
+
+
   C:16EAH         LINE#         229
   C:16EAH         LINE#         230
   C:16EAH         LINE#         231
@@ -4259,11 +4257,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:00D8H.7       PUBLIC        CF
   B:00B0H.2       PUBLIC        nINT0
   B:0098H.7       PUBLIC        FE
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 72
-
-
   B:00B0H.3       PUBLIC        nINT1
   D:00A8H         PUBLIC        IEN0
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 72
+
+
   B:00B0H.0       PUBLIC        RxD
   B:0090H.0       PUBLIC        P1_0
   B:00B0H.1       PUBLIC        TxD
@@ -4319,11 +4317,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   B:0090H.5       PUBLIC        MISO
   B:0090H.7       PUBLIC        MOSI
   B:0080H.4       PUBLIC        AD4
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 73
-
-
   B:00B0H.0       PUBLIC        per_TxD
   B:0080H.5       PUBLIC        AD5
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 73
+
+
   B:0080H.6       PUBLIC        AD6
   B:0080H.7       PUBLIC        AD7
   B:00A0H.0       PUBLIC        AD8
@@ -4379,11 +4377,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   D:00D0H         PUBLIC        PSW
   B:00D8H.0       PUBLIC        CCF0
   B:00D8H.1       PUBLIC        CCF1
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 74
-
-
   -------         PROC          MAIN
   -------         DO            MAIN
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 74
+
+
   I:007FH         SYMBOL        block_num
   I:0083H         SYMBOL        i
   I:0085H         SYMBOL        error_flag
@@ -4439,11 +4437,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:2494H         LINE#         85
   C:2496H         LINE#         86
   C:2496H         LINE#         87
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 75
-
-
   C:249BH         LINE#         88
   C:24A0H         LINE#         89
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 75
+
+
   C:24A2H         LINE#         90
   C:24A2H         LINE#         91
   C:24B5H         LINE#         92
@@ -4499,11 +4497,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   C:1B39H         PUBLIC        ?C?CSTPTR
   -------         ENDMOD        ?C?CSTPTR
 
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 76
-
-
   -------         MODULE        ?C?CSTOPTR
   C:1B4BH         PUBLIC        ?C?CSTOPTR
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 76
+
+
   -------         ENDMOD        ?C?CSTOPTR
 
   -------         MODULE        ?C?UIDIV
@@ -4559,11 +4557,11 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         ENDMOD        ?C?LSTXDATA
 
   -------         MODULE        ?C?LSTKIDATA
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 77
-
-
   C:1DC5H         PUBLIC        ?C?LSTKIDATA
   -------         ENDMOD        ?C?LSTKIDATA
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 77
+
+
 
   -------         MODULE        PUTCHAR
   C:0003H         PUBLIC        _PUTCHAR
@@ -4581,7 +4579,7 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         ENDMOD        PRINTF
 
   -------         MODULE        ATOL
-  C:327DH         PUBLIC        _ATOL
+  C:3186H         PUBLIC        _ATOL
   -------         ENDMOD        ATOL
 
   -------         MODULE        ?C?LNEG
@@ -4609,21 +4607,21 @@ SYMBOL TABLE OF MODULE:  CPE5160_Final (DIRECTORY_FUNCTIONS_STRUCT)
   -------         ENDMOD        ?C?CCASE
 
   -------         MODULE        ISDIGIT
-  C:3CBFH         PUBLIC        _ISDIGIT
+  C:3C70H         PUBLIC        _ISDIGIT
   -------         ENDMOD        ISDIGIT
 
   -------         MODULE        ISSPACE
-  C:3CACH         PUBLIC        _ISSPACE
+  C:3C5DH         PUBLIC        _ISSPACE
   -------         ENDMOD        ISSPACE
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_OPEN_FILE?DIRECTORY_FUNCTIONS_STRUCT
 
-BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:17:02  PAGE 78
-
-
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?GO_TO_SLEEP?SEOS
+BL51 BANKED LINKER/LOCATER V4.02                                                      12/10/2019  19:27:39  PAGE 78
+
+
 
 *** WARNING L15: MULTIPLE CALL TO SEGMENT
     SEGMENT: ?PR?_SPI_TRANSFER?SPI

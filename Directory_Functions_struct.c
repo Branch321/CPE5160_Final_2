@@ -410,17 +410,15 @@ uint8_t Open_File(uint32_t Cluster, uint8_t xdata * array_in)
 	uint8_t error_flag = no_errors;
 	uint32_t sector_num;
 	uint32_t first_sec_num;
-	printf("cluster_number:: %lx",Cluster);
+
 	do
 	{
 		first_sec_num = First_Sector(Cluster);
-		printf("first_sec_num:: %lx",first_sec_num);
 		sector_num = first_sec_num;
 		while(sector_num!=Drive_values.SecPerClus+first_sec_num)
 		{
 			error_flag = Read_Sector(sector_num,Drive_values.BytesPerSec, array_in);
 			sector_num++;
-			//print_memory(array_in,512);
 		}
 		Cluster = Find_Next_Clus(Cluster,array_in);
 	}while(Cluster!=0x0FFFFFFF);

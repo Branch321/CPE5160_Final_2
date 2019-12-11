@@ -5,7 +5,6 @@ Target (Target 1), 0x0000 // Tools: 'MCS-51'
 
 Group (Source Group 1)
 
-File 1,1,<.\SD_card_test.c><SD_card_test.c>
 File 1,1,<.\Directory_Functions_struct.c><Directory_Functions_struct.c>
 File 1,1,<.\LCD_hardware_functions.c><LCD_hardware_functions.c>
 File 1,1,<.\LCD_routines.c><LCD_routines.c>
@@ -41,6 +40,7 @@ File 1,5,<.\I2C.h><I2C.h>
 File 1,5,<.\STA013.h><STA013.h>
 File 1,5,<.\MP3.h><MP3.h>
 File 1,1,<.\MP3.c><MP3.c>
+File 1,1,<.\main.c><main.c>
 
 
 Options 1,0,0  // Target 'Target 1'

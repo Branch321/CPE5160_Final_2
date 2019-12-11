@@ -1,4 +1,4 @@
-C51 COMPILER V6.02  OUTPUTS                                                                12/10/2019 19:16:58 PAGE 1   
+C51 COMPILER V6.02  OUTPUTS                                                                12/10/2019 19:27:35 PAGE 1   
 
 
 C51 COMPILER V6.02, COMPILATION OF MODULE OUTPUTS
@@ -62,7 +62,7 @@ stmt level    source
   53          } */
   54          
   55          /* void P2_clear_bit(uint8_t Bit_Data)
-C51 COMPILER V6.02  OUTPUTS                                                                12/10/2019 19:16:58 PAGE 2   
+C51 COMPILER V6.02  OUTPUTS                                                                12/10/2019 19:27:35 PAGE 2   
 
   56          {
   57            P2&=(~Bit_Data);
